@@ -6,10 +6,6 @@ CREATE TABLE `login` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `Untitled` (
-
-);
-
 CREATE TABLE `postagem` (
 	`id` bigint NOT NULL AUTO_INCREMENT,
 	`titulo` varchar(100),
