@@ -1,6 +1,6 @@
 24/07
  
-### Integrantes GrupoZero1
+### Integrantes GrupoZeroUm
 [Lais Basso](https://github.com/laisbasso "GitHub")  
 [Mayara Dotta](https://github.com/DottaMP "GitHub")  
 [Matheus Müller](https://github.com/matheuxmuller "GitHub")  
