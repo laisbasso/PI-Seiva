@@ -37,11 +37,11 @@ Nome completo, email e senha serão pedidos ao usuário para criar um novo cadas
 | id | bigint Primary Key
 | titulo | varchar (100)
 | data | datatime
-| descricao | text (500)
+| descricao | varchar (500)
 | autor_id | biginit Foreign Key
 | tema_id | biginit Foreign Key
  
-O usuário não precisará entrar com a data, pois a rede se encarregará de pegar a hora do sistema. Estará formatado em “dd-MM-yyyy HH:mm:ss”. O usuário digitará o conteúdo do post no campo de descrição (text) que podendo receber mais caracteres do que um varchar. Os demais campos serão essenciais para poder enviar o post, recebendo a id do autor e também do tema relacionado. Será gerada uma id própria do post.
+O usuário não precisará entrar com a data, pois a rede se encarregará de pegar a hora do sistema. Estará formatado em “dd-MM-yyyy HH:mm:ss”. O usuário digitará o conteúdo do post no campo de descrição que podendo receber mais caracteres do que um varchar. Os demais campos serão essenciais para poder enviar o post, recebendo a id do autor e também do tema relacionado. Será gerada uma id própria do post.
 
 | Tabela | **Tema** |
 |-------:|:---------|
