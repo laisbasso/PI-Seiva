@@ -21,7 +21,7 @@
 | Atributo | Tipo |
 |--------|--------------|
 | id | (PK) biginit
-| nome completo | varchar (200)
+| nome_completo | varchar (200)
 | email | varchar (200)
 | senha | varchar (20)
  
