@@ -1,9 +1,9 @@
-### Integrantes GrupoZeroUm
+### Integrantes GrupoZeroUm :sparkles:
 :octocat: [Lais Basso](https://github.com/laisbasso "GitHub")  
-:smiley_cat: [Mayara Dotta](https://github.com/DottaMP "GitHub")  
+:smiley_cat: [Mayara Dotta](https://github.com/DottaMP "GitHub")
 :princess: [Matheus Müller](https://github.com/matheuxmuller "GitHub")  
 :bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
-:panda_face: [Letícia Sena](https://github.com/leticia-sena "GitHub")
+:alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
 # Aorta :white_flower: :heart:
 
