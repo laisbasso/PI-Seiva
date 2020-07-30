@@ -20,7 +20,7 @@
 
 | Atributo | Tipo |
 |--------|--------------|
-| id | (PK) biginit
+| id | [PK] biginit
 | nome_completo | varchar (200)
 | email | varchar (200)
 | senha | varchar (20)
@@ -31,12 +31,12 @@ Nome completo, email e senha serão pedidos ao usuário para criar um novo cadas
 
 | Atributo | Tipo |
 |--------|----------|
-| id | (PK) bigint
+| id | [PK] bigint
 | titulo | varchar (100)
 | data | datatime
 | descricao | varchar (500)
-| autor_id | (FK) biginit
-| tema_id | (FK) biginit
+| autor_id | [FK] biginit
+| tema_id | [FK] biginit
  
 O usuário não precisará entrar com a data, pois a rede se encarregará de pegar a hora do sistema. Estará formatado em “dd-MM-yyyy HH:mm:ss”. O usuário digitará o conteúdo do post no campo de descrição que podendo receber mais caracteres do que um varchar. Os demais campos serão essenciais para poder enviar o post, recebendo a id do autor e também do tema relacionado. Será gerada uma id própria do post.
 
@@ -44,7 +44,7 @@ O usuário não precisará entrar com a data, pois a rede se encarregará de peg
 
 | Atributo | Tipo |
 |--------|----------|
-| id | (PK) biginit
+| id | [PK] biginit
 | descricao | varchar (15)
  
 A tabela de temas possuirá os temas fixos disponíveis e marcará com true quando o post for sobre o assunto.
