@@ -15,5 +15,5 @@ Nossa plataforma será uma via (artéria) que agrega várias vertentes de ver e 
 
 ### Entregas
 
-30/07 - [Descrição Model Tema](https://github.com/laisbasso/PI-Aorta/blob/master/Entregas/DescricaoTemaModel.md "Descrição Model Tema")  
+30/07 - [Descrição Tema Model](https://github.com/laisbasso/PI-Aorta/blob/master/Entregas/DescricaoTemaModel.md "Descrição Tema Model") | [Código](https://github.com/laisbasso/PI-Aorta/blob/master/aorta/src/main/java/com/aorta/aorta/model/TemaModel.java "Código Tema Model")  
 24/07 - [Diagrama Entidade Relacionamento](https://github.com/laisbasso/PI-Aorta/tree/master/DER "DER")
