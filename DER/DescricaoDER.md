@@ -1,12 +1,5 @@
 24/07
  
-### Integrantes GrupoZeroUm
-[Lais Basso](https://github.com/laisbasso "GitHub")  
-[Mayara Dotta](https://github.com/DottaMP "GitHub")  
-[Matheus Müller](https://github.com/matheuxmuller "GitHub")  
-[Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
-[Letícia Sena](https://github.com/leticia-sena "GitHub")
- 
 # Descrição DER
  
 ## Relacionamento entre as tabelas
