@@ -16,7 +16,9 @@
 
 ## Definição das tabelas
 
-| Tabela | **Cadastro** |
+### Tabela Cadastro
+
+| Atributo | Tipo |
 |--------|--------------|
 | id | (PK) biginit
 | nome completo | varchar (200)
@@ -25,7 +27,9 @@
  
 Nome completo, email e senha serão pedidos ao usuário para criar um novo cadastro. Será gerada uma id própria automaticamente, que servirá para relacionar as atividades do usuário dentro da plataforma.
  
-| Tabela | **Post** |
+### Tabela Post
+
+| Atributo | Tipo |
 |--------|----------|
 | id | (PK) bigint
 | titulo | varchar (100)
@@ -36,7 +40,9 @@ Nome completo, email e senha serão pedidos ao usuário para criar um novo cadas
  
 O usuário não precisará entrar com a data, pois a rede se encarregará de pegar a hora do sistema. Estará formatado em “dd-MM-yyyy HH:mm:ss”. O usuário digitará o conteúdo do post no campo de descrição que podendo receber mais caracteres do que um varchar. Os demais campos serão essenciais para poder enviar o post, recebendo a id do autor e também do tema relacionado. Será gerada uma id própria do post.
 
-| Tabela | **Tema** |
+### Tabela Tema
+
+| Atributo | Tipo |
 |--------|----------|
 | id | (PK) biginit
 | descricao | varchar (15)
