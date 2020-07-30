@@ -6,7 +6,7 @@
  
 | CADASTRO | POST
 |---:|:---|
-| Um login pode fazer vários posts | Um post só pode ter um login
+| Um login pode fazer vários posts | Um post só pode ter um único login
 | 1 | N
 
 | POST | TEMA
