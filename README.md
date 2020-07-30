@@ -1,11 +1,11 @@
 ### Integrantes GrupoZeroUm
-[Lais Basso](https://github.com/laisbasso "GitHub")  
-[Mayara Dotta](https://github.com/DottaMP "GitHub")  
-[Matheus Müller](https://github.com/matheuxmuller "GitHub")  
-[Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
-[Letícia Sena](https://github.com/leticia-sena "GitHub")
+:octocat: [Lais Basso](https://github.com/laisbasso "GitHub")  
+:smiley_cat: [Mayara Dotta](https://github.com/DottaMP "GitHub")  
+:princess: [Matheus Müller](https://github.com/matheuxmuller "GitHub")  
+:bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
+:panda_face: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
-# Aorta
+# Aorta :white_flower: :heart:
 
 Projeto Integrador do *Grupo ZeroUm -* **Rede Social Aorta** desenvolvida durante o *Bootcamp Generation*.
 
@@ -13,7 +13,7 @@ Projeto Integrador do *Grupo ZeroUm -* **Rede Social Aorta** desenvolvida durant
 
 Nossa plataforma será uma via (artéria) que agrega várias vertentes de ver e viver a arte, como uma grande artéria mesmo, fazendo as conexões necessárias para o funcionamento de um grande organismo.
 
-### Entregas
+### Entregas :heavy_check_mark:
 
 | Data | Tipo de Entrega | Documentação |
 |------|-----------------|--------------|
