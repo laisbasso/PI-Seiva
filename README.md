@@ -5,13 +5,13 @@
 :bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
-# Aorta :white_flower: :heart:
+# Nome do projeto: 
 
-Projeto Integrador do *Grupo ZeroUm -* **Rede Social Aorta** desenvolvida durante o *Bootcamp Generation*.
+Projeto Integrador do *Grupo ZeroUm -* **Nome Projeto** desenvolvida durante o *Bootcamp Generation*.
 
-**“Aorta”** é a maior e mais importante *“artéria”* de todo o sistema circulatório do corpo humano. Dela se derivam todas as outras artérias do organismo, com exceção da artéria pulmonar.  
+**“Nome Projeto”** 
 
-Nossa plataforma será uma via (artéria) que agrega várias vertentes de ver e viver a arte, como uma grande artéria mesmo, fazendo as conexões necessárias para o funcionamento de um grande organismo.
+Nossa plataforma será uma via que agrega várias vertentes de ver e viver a arte.
 
 ### Entregas :heavy_check_mark:
 
