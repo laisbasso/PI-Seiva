@@ -6,7 +6,7 @@
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
 # agrega+
-Projeto Integrador do *Grupo ZeroUm -* **agrega+** desenvolvida durante o *Bootcamp Generation*.
+Projeto Integrador do *Grupo ZeroUm * **agrega+** desenvolvida durante o *Bootcamp Generation*.
 
 **“agrega+”** 
 
