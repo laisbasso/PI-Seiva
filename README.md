@@ -5,7 +5,7 @@
 :bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
-# agrega:heavy_plus_sign:
+# agrega+
 Projeto Integrador do *Grupo ZeroUm* **agrega+** desenvolvida durante o *Bootcamp Generation*.
 
 **“agrega+”** 
