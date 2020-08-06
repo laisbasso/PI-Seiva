@@ -7,11 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.redeSocial.seiva.model.TemaModel;
 
-
-
 @Repository
-public interface TemaRepository extends JpaRepository <TemaModel, Long> {
-	
+public interface TemaRepository extends JpaRepository<TemaModel, Long> {
+
 	public List<TemaModel> findAllByDescricaoContainingIgnoreCase(String descricao);
 
 }

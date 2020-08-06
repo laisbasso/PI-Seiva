@@ -1,5 +1,7 @@
 package com.redeSocial.seiva.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,42 +14,42 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.redeSocial.seiva.model.TemaModel;
-import java.util.List;
-import com.redeSocial.seiva.repository.TemaRepository;
+
+import com.redeSocial.seiva.model.PostagemModel;
+import com.redeSocial.seiva.repository.PostagemRepository;
 
 @RestController
-@RequestMapping("/tema")
+@RequestMapping("/postagem")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 
-public class TemaController {
+public class PostagemController {
 
 	@Autowired
-	private TemaRepository repository;
+	private PostagemRepository repository;
 
 	@GetMapping
-	public ResponseEntity<List<TemaModel>> GetAll() {
+	public ResponseEntity<List<PostagemModel>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<TemaModel> GetById(@PathVariable long id) {
+	public ResponseEntity<PostagemModel> GetById(@PathVariable long id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.badRequest().build());
 	}
 
 	@GetMapping("/descricao/{descricao}")
-	public ResponseEntity<List<TemaModel>> GetByDescricao(@PathVariable String descricao) {
+	public ResponseEntity<List<PostagemModel>> GetByDescricao(@PathVariable String descricao) {
 		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
 
 	@PostMapping
-	public ResponseEntity<TemaModel> Post(@RequestBody TemaModel tema) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tema));
+	public ResponseEntity<PostagemModel> Post(@RequestBody PostagemModel postagem) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
 	}
 
 	@PutMapping
-	public ResponseEntity<TemaModel> Put(@RequestBody TemaModel tema) {
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(tema));
+	public ResponseEntity<PostagemModel> Put(@RequestBody PostagemModel postagem) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
 	}	
 
 	@DeleteMapping("/{id}")
