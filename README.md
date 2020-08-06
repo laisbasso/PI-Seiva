@@ -8,7 +8,7 @@
 # seiva
 Projeto Integrador do *Grupo ZeroUm* **seiva** desenvolvida durante o *Bootcamp Generation*.
 
-**“seivaa”** 
+**“seiva”** 
 
 Nossa plataforma será uma via que agrega várias vertentes de ver e viver a arte.
 
