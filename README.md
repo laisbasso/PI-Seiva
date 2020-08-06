@@ -1,16 +1,19 @@
 ### Integrantes GrupoZeroUm :sparkles:
 :octocat: [Lais Basso](https://github.com/laisbasso "GitHub")  
-:smiley_cat: [Mayara Dotta](https://github.com/DottaMP "GitHub")  
+:four_leaf_clover: [Mayara Dotta](https://github.com/DottaMP "GitHub")  
 :princess: [Matheus Müller](https://github.com/matheuxmuller "GitHub")  
 :bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
-# seiva
-Projeto Integrador do *Grupo ZeroUm* **seiva** desenvolvida durante o *Bootcamp Generation*.
+# Seiva
+Projeto Integrador do *Grupo ZeroUm* desenvolvida durante o *Bootcamp Generation*.
 
-**“seiva”** 
 
-Nossa plataforma será uma via que agrega várias vertentes de ver e viver a arte.
+**Seiva**, segundo a botânica, é um líquido que realiza o transporte da água, nutrientes, hormônios, oxigênio e gás carbônico pelo interior das plantas vasculares. Corresponde ao sangue dos seres humanos.
+
+Tanto a seiva quanto o sangue são substâncias vitais, que percorrem o interior e nos fornecem energia e vigor, mas, para além de características biológicas, nós seres humanos, precisamos de fatores socioculturais para sobrevivência.
+
+Como diriam os Titãs, “a gente não quer só comida, a gente quer comida, diversão e arte”, e é pensando nisso que nasce a rede social Seiva, considerando as formas de ver e viver a arte como um combustível.
 
 ### Entregas :heavy_check_mark:
 
