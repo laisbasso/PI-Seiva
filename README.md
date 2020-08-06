@@ -5,7 +5,7 @@
 :bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
-# Seiva
+# Seiva :seedling:
 Projeto Integrador do *Grupo ZeroUm* desenvolvida durante o *Bootcamp Generation*.  
 
 &nbsp;&nbsp;&nbsp;&nbsp; **Seiva**, segundo a botânica, é um líquido que realiza o transporte da água, nutrientes, hormônios, oxigênio e gás carbônico pelo interior das plantas vasculares. Corresponde ao sangue dos seres humanos.  
