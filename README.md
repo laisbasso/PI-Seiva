@@ -6,7 +6,7 @@
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
 # Seiva :seedling:
-Projeto Integrador do *Grupo ZeroUm* desenvolvida durante o *Bootcamp Generation*.  
+&nbsp;&nbsp;&nbsp;&nbsp; Projeto Integrador do *Grupo ZeroUm* desenvolvida durante o *Bootcamp Generation*.  
 
 &nbsp;&nbsp;&nbsp;&nbsp; **Seiva**, segundo a botânica, é um líquido que realiza o transporte da água, nutrientes, hormônios, oxigênio e gás carbônico pelo interior das plantas vasculares. Corresponde ao sangue dos seres humanos.  
 &nbsp;&nbsp;&nbsp;&nbsp; Tanto a seiva quanto o sangue são substâncias vitais, que percorrem o interior e nos fornecem energia e vigor, mas, para além de características biológicas, nós seres humanos, precisamos de fatores socioculturais para sobrevivência.  
