@@ -1,13 +1,13 @@
-package com.redesocial.agrega;
+package com.redeSocial.seiva;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AgregaApplication {
+public class SeivaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AgregaApplication.class, args);
+		SpringApplication.run(SeivaApplication.class, args);
 	}
 
 }

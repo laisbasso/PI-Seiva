@@ -1,4 +1,4 @@
-package com.redesocial.agrega.model;
+package com.redeSocial.seiva.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,13 +9,13 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="tb_tema")
+@Table(name = "tb_tema")
 public class TemaModel {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotNull
 	@Size(min = 3, max = 15)
 	private String descricao;
@@ -35,6 +35,5 @@ public class TemaModel {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
 
 }

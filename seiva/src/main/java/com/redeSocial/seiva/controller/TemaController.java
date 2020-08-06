@@ -1,6 +1,4 @@
-package com.redesocial.agrega.controller;
-
-import java.util.List;
+package com.redeSocial.seiva.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,52 +12,46 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.redesocial.agrega.model.TemaModel;
-import com.redesocial.agrega.repository.TemaRepository;
+import com.redeSocial.seiva.model.TemaModel;
+import java.util.List;
+import com.redeSocial.seiva.repository.TemaRepository;
 
 @RestController
-@RequestMapping ("/tema")
-@CrossOrigin (origins = "*", allowedHeaders = "*")
+@RequestMapping("/tema")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 
 public class TemaController {
-	
+
 	@Autowired
 	private TemaRepository repository;
-	
+
 	@GetMapping
-	public ResponseEntity<List<TemaModel>> GetAll()
-	{
+	public ResponseEntity<List<TemaModel>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
-	
-	@GetMapping ("/{id}") public ResponseEntity<TemaModel> GetById(@PathVariable long id)
-	{
-		return repository.findById(id)
-				.map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.badRequest().build()); 
+
+	@GetMapping("/{id}")
+	public ResponseEntity<TemaModel> GetById(@PathVariable long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.badRequest().build());
 	}
-	
+
 	@GetMapping("/descricao/{descricao}")
-	public ResponseEntity<List<TemaModel>> GetByDescricao (@PathVariable String descricao){
+	public ResponseEntity<List<TemaModel>> GetByDescricao(@PathVariable String descricao) {
 		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
-	
-	@PostMapping public ResponseEntity <TemaModel> Post(@RequestBody TemaModel descricao)
-	{
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(repository.save(descricao));
+
+	@PostMapping
+	public ResponseEntity<TemaModel> Post(@RequestBody TemaModel descricao) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(descricao));
 	}
-	
-	@PutMapping public ResponseEntity <TemaModel> Put(@RequestBody TemaModel descricao)
-	{
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(repository.save(descricao));
+
+	@PutMapping
+	public ResponseEntity<TemaModel> Put(@RequestBody TemaModel descricao) {
+		return ResponseEntity.ok(repository.save(descricao));
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public void Delete (@PathVariable long id)
-	{
+	public void Delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
 

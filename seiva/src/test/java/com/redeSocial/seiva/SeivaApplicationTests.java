@@ -1,10 +1,10 @@
-package com.redesocial.agrega;
+package com.redeSocial.seiva;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AgregaApplicationTests {
+class SeivaApplicationTests {
 
 	@Test
 	void contextLoads() {

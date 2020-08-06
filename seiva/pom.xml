@@ -8,11 +8,11 @@
 		<version>2.3.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.redesocial</groupId>
-	<artifactId>agrega</artifactId>
+	<groupId>com.redeSocial</groupId>
+	<artifactId>seiva</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>agrega</name>
-	<description>Rede Social agrega+ - Projeto Integrador do Grupo ZeroUm</description>
+	<name>seiva</name>
+	<description>Projeto integrador do grupo ZeroUm, rede social - Seiva</description>
 
 	<properties>
 		<java.version>1.8</java.version>
