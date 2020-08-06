@@ -5,12 +5,12 @@
 :bear: [Victor Hugo Ulloa](https://github.com/Victorhup "GitHub")  
 :alien: [Letícia Sena](https://github.com/leticia-sena "GitHub")
 
-# agrega+
-Projeto Integrador do *Grupo ZeroUm* **agrega+** desenvolvida durante o *Bootcamp Generation*.
+# seiva
+Projeto Integrador do *Grupo ZeroUm* **seiva** desenvolvida durante o *Bootcamp Generation*.
 
-**“agrega+”** 
+**“seivaa”** 
 
-Nossa plataforma será uma via que agrega várias vertentes de ver e viver a arte. Fazendo com que se juntem (pessoas ou coisas), reunindo em uma só todas as partes que não têm ligação entre si.
+Nossa plataforma será uma via que agrega várias vertentes de ver e viver a arte.
 
 ### Entregas :heavy_check_mark:
 
