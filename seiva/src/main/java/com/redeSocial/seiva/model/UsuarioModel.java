@@ -10,12 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tb_cadastro")
+@Table(name = "tb_usuario")
 public class UsuarioModel {
 
 	@Id
@@ -23,15 +22,12 @@ public class UsuarioModel {
 	private long id;
 
 	@NotNull
-	@Size(min = 8, max = 200)
 	private String nome;
 
 	@NotNull
-	@Size(min = 8, max = 200)
-	private String email;
+	private String usuario;
 
 	@NotNull
-	@Size(min = 6, max = 20)
 	private String senha;
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.PERSIST)
@@ -54,12 +50,12 @@ public class UsuarioModel {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {
