@@ -33,14 +33,14 @@
 
 ## Componentes Angular do projeto
 
-- <b>ng g c home-inicio:</b>
-- <b>ng g c footer:</b>
-- <b>ng g c equipe:</b>
-- <b>ng g c sobre:</b>
-- <b>ng g c feed:</b>
-- <b>ng g c perfil:</b>
-- <b>ng g c navbar</b>
-- <b>ng g c junte-se:</b>
+- <b>ng g c home-inicio:</b> :white_check_mark:
+- <b>ng g c footer:</b> :white_check_mark:
+- <b>ng g c equipe:</b> :white_check_mark:
+- <b>ng g c sobre:</b> :white_check_mark:
+- <b>ng g c feed:</b> :arrows_counterclockwise:
+- <b>ng g c perfil:</b> :arrows_counterclockwise:
+- <b>ng g c navbar</b> :arrows_counterclockwise:
+- <b>ng g c junte-se:</b> :arrows_counterclockwise:
 
 <br>
 
