@@ -2,6 +2,7 @@
 
 # Estrutura de páginas (Rede Social Seiva)
 
+<br>
 
 ## Descrição de itens nas páginas
 
@@ -40,6 +41,8 @@
 - <b>ng g c perfil:</b>
 - <b>ng g c navbar</b>
 - <b>ng g c junte-se:</b>
+
+<br>
 
 ## Considerações para uma versão 2.0
 
