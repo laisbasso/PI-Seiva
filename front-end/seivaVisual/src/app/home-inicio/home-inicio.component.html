@@ -30,31 +30,58 @@
 </div>
 
 <!-- FORMULÁRIO -->
-
-<div class="d-flex bd-highlight position">
-    <div class="row mt">
-        <div class="col bgColor p-5 form">
-            <form>
-                <div class="form-group ">
-                    <label for="exampleInputEmail1">Endereço de email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Seu email">
-                    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
-                        ninguém.</small>
+<div *ngIf="cadastrar;else login">
+    <div class="d-flex bd-highlight position">
+        <div class="row mt">
+            <div class="col bgColor p-5 form">
+                <div>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Seu email">
+                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+                            ninguém.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Enviar</button>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
-                </div>
-                <button type="submit" class="btn btn-warning">Enviar</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+<ng-template #login>
+    <div class="d-flex bd-highlight position">
+        <div class="row mt">
+            <div class="col bgColor p-5 form">
+                <div>
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1">Endereço de email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Seu email">
+                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+                            ninguém.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    </div>
+                    <div class="form-group form-check">
+                        <a (click)=cadastro()>Cadastre-se</a>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
 
 <!-- /FORMULÁRIO -->
 
