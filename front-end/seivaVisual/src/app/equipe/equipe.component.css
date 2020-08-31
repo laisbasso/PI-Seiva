@@ -1,0 +1,49 @@
+ul.social-network {
+    list-style: none;
+    display: inline;
+  
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .faLinkedin, .faGithub{
+      color: rgba(172, 172, 172, 0.815);
+  }
+  
+  .faLinkedin:hover{
+  color: #0072b1;
+  }
+  
+  .faGithub:hover{
+  color: #000000;
+  }
+
+/*   .body{ 
+    background-color: #ffffff; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0.788)), url("./img/bg.png");
+    background-repeat: no-repeat;
+} */
+
+.parallax {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://blush.ly/ZXorSaiLo/p");
+
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  opacity: 0.7;
+}
+
+img:hover {
+  opacity: 1.0;
+}
