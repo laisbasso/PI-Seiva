@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeInicioComponent implements OnInit {
 
+  cadastro: boolean = false
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
+  cadastrar(){
+    this.cadastro = true
+  }
+
+  logar(){
+    this.cadastro = false
+  }
 }
