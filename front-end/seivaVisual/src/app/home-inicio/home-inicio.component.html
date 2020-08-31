@@ -41,27 +41,24 @@
                     <div class="form-group ">
                         <label for="exampleInputEmail1">Nome completo</label>
                         <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp"
-                            placeholder="Nome completo">
+                            placeholder="Nome completo" [(ngModel)]='user.nome'>
                         <label for="exampleInputEmail1">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="nome@exemplo.com">
-                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
-                            ninguém.</small>
+                            placeholder="nome@exemplo.com" [(ngModel)]='user.usuario'>
+                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" (input)="conferirSenha ($event)" value="{{senha}}">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword2">Confirmar senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirmar senha">
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirmar senha" [(ngModel)]='user.senha'>
                     </div>
                     <div class="form-group form-check">
-                        <!-- <a href="#" class="text-decoration-none text-dark">Fazer login</a> -->
-                        
                         <a (click)=logar()>Login</a>
                     </div>
-                    <button type="submit" class="btn btn-warning">Enviar</button>
+                    <button type="submit" (click)="cadastrar()" class="btn btn-warning">Enviar</button>
                 </div>
             </div>
         </div>
@@ -76,18 +73,18 @@
                     <div class="form-group ">
                         <label for="exampleInputEmail1">Endereço de email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Seu email">
+                        placeholder="Seu email" [(ngModel)]='userLogin.usuario'>
                         <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                             ninguém.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" [(ngModel)]='userLogin.senha'>
                     </div>
                     <div class="form-group form-check">
-                        <a (click)=cadastrar()>Cadastrar</a>
+                        <a (click)=cadastrase()>Cadastrar</a>
                     </div>
-                    <button type="submit" class="btn btn-warning">Enviar</button>
+                    <button type="submit" class="btn btn-outline-success w-25 " (click)='entrar()'>Entrar</button>
                 </div>
             </div>
         </div>
