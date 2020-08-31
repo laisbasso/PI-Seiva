@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { Router } from '@angular/router';
+import { AuthService } from "./../service/auth.service";
 
 @Component({
   selector: 'app-equipe',
@@ -12,9 +14,13 @@ export class EquipeComponent implements OnInit {
   faGithub = faGithub
   faLinkedin = faLinkedin
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    public auth: AuthService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0, 0)
   }
 
 }
