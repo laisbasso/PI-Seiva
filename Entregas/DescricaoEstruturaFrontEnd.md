@@ -49,3 +49,4 @@
 - Integração com Hand Talk (acessibilidade em Libras para a Página)
 - Implantação de E-commerce (recurso para ONGs e pequenos produtores venderem seus produtos, semelhante a Loja do Instagram)
 - Habilitação de Dark mode
+- Possibilidade de cadastro e login integrado à conta do Facebook ou Google
