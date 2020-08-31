@@ -1,0 +1,28 @@
+.positionContainer {
+    position: relative;
+    height: 10px;
+}
+
+.position {
+    position: absolute;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+.form {
+    border-radius: 20px;
+}
+
+.mt {
+    margin-top: 100px;
+    margin-right: 130px;
+}
+
+.bgColor {
+    background-color: #bd59d4;
+    overflow: visible;
+}
+
+.btnColor {
+    background-color: orangered;
+}
