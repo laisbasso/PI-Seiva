@@ -37,7 +37,7 @@
 - <b>ng g c footer:</b> :white_check_mark:
 - <b>ng g c equipe:</b> :white_check_mark:
 - <b>ng g c sobre:</b> :white_check_mark:
-- <b>ng g c feed:</b> :arrows_counterclockwise:
+- <b>ng g c feed:</b> :white_check_mark:
 - <b>ng g c perfil:</b> :arrows_counterclockwise:
 - <b>ng g c navbar</b> :arrows_counterclockwise:
 - <b>ng g c junte-se:</b> :arrows_counterclockwise:
