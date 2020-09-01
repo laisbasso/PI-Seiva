@@ -1,0 +1,167 @@
+<div class="container mt-5 mb-5 p-5">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+  
+      <div class="col-md-8">
+        <div class="display-4 p-3 mb-3"> Bom dia, flor do dia. Vamos falar de música hoje? </div>
+  
+        <div class="form-group">
+          <label class="" for="titulo">Título:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="titulo"
+            placeholder="Digite aqui o seu titulo"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label class="" for="texto">Texto:</label>
+          <textarea
+            class="form-control"
+            id="texto"
+            rows="3"
+            placeholder="Digite aqui o seu texto"
+          ></textarea>
+        </div>
+  
+        <div class="row d-flex align-items-end">
+          <div class="col-md-6">
+            <div class="form-group m-0">
+              <label class="" for="tema"
+                >Escolha um tema ou <a>Cadastre um novo</a></label
+              >
+              <select name="tema" id='tema' class="form-control" [(ngModel)]="idTema" (change)="findByIdTema()">
+                <option *ngFor="let item of listaTemas" value={{item.id}}>
+                    {{item.descricao}} </option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="col-md-6 d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-warning w-25">
+              Publicar
+            </button>
+          </div>
+        </div>
+  
+        <hr class="mt-5 mb-5" />
+  
+        <nav class="d-flex justify-content-center">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a
+              class="nav-item nav-link active text-secondary font-weight-bold"
+              id="nav-home-tab"
+              data-toggle="tab"
+              href="#minhas-postagens"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+              >Minhas Postagens</a
+            >
+  
+            <a
+              class="nav-item nav-link text-secondary font-weight-bold"
+              id="nav-profile-tab"
+              data-toggle="tab"
+              href="#postagens-temas"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+              >Postagens por tema</a
+            >
+          </div>
+        </nav>
+  
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel" aria-labelledby="nav-postagens-tab">
+  
+              <div class="row mt-3 mb-3">
+                  <div class="col-md-10 pr-0">
+                      <input class="form-control w-100" type="search" placeholder="Pesquisar Postagem"aria-label="Pesquisar"/>
+                  </div>
+                  <div class="col-md-2 pl-0">
+                      <button class="btn btn-outline-warning w-100" type="button"> Pesquisar </button>
+                  </div>
+              </div>
+
+
+<!-- Postagens -->
+
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="card mt-5 mb-5"  *ngFor="let item of listaPostagens">
+      <div class="card-header">
+          <div class="row d-flex align-items-center">
+              <div class="col-md-8">
+                  <h5 class="card-title">{{item.titulo}}</h5>
+                  <small>Tema: {{item.tema.descricao}}</small>
+              </div>
+              <div class="col-md-4 d-flex justify-content-end">
+
+                  <button class="mr-3 btn btn-outline-info">
+                      Editar
+                  </button>
+
+                  <button class="btn btn-outline-danger ml-3">
+                      Apagar
+                  </button>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="card-body" >
+        <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
+        <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+          Postado em {{item.data}} </small>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+              
+<!-- Postagens -->
+
+          </div>
+
+          
+
+
+
+
+<!-- Temas -->
+  
+          <div class="tab-pane fade" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
+              <div class="row mt-3 mb-3">
+                  <div class="col-md-10 pr-0">
+                      <input class="form-control w-100" type="search" placeholder="Pesquisar Postagem"aria-label="Pesquisar"/>
+                  </div>
+                  <div class="col-md-2 pl-0">
+                      <button class="btn btn-outline-warning w-100" type="button"> Pesquisar </button>
+                  </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-12">
+
+
+                  
+                </div>
+              </div>
+
+
+<!-- Temas -->
+
+          </div>
+
+  
+          
+        </div>
+      </div>
+    </div>
+  </div>
