@@ -10,6 +10,7 @@ import { HomeInicioComponent } from './home-inicio/home-inicio.component';
 import { FooterComponent } from './footer/footer.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SobreComponent } from './sobre/sobre.component';
     HomeInicioComponent,
     FooterComponent,
     EquipeComponent,
-    SobreComponent
+    SobreComponent,
+    PostTemaComponent
   ],
   imports: [
     BrowserModule,
