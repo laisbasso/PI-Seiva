@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
     FooterComponent,
     EquipeComponent,
     SobreComponent,
-    PostTemaComponent
+    PostTemaComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
