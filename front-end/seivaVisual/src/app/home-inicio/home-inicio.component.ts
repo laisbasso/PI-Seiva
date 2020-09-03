@@ -41,6 +41,7 @@ export class HomeInicioComponent implements OnInit {
     if (this.senha === this.user.senha) {
       this.authService.cadastrar(this.user).subscribe((resp:User) => {
         this.user = resp
+        this.cadastro = false
         this.router.navigate(["/home-inicio"])
         alert("Usuário cadastrado com sucesso!")
       })
@@ -53,6 +54,7 @@ export class HomeInicioComponent implements OnInit {
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) =>{
       this.userLogin = resp
       localStorage.setItem('token', this.userLogin.token)
+      localStorage.setItem('email', this.userLogin.usuario)
       this.router.navigate(['/equipe'])
     })
   }

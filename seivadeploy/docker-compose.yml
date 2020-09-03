@@ -8,9 +8,9 @@ services:
       dockerfile: Dockerfile
     environment:
       TZ: America/Sao_Paulo
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root123
       MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: root123
       MYSQL_DATABASE: db_seiva
     ports:
       - "3308:3306"

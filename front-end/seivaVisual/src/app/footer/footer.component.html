@@ -11,6 +11,11 @@
               btn-sm p-3 mr-1" (click)='sair()'>Sair</a>
       </div>
 
+      <div *ngIf='auth.admin()' class="col-md-12 justify-content-center d-flex">
+        <a class="text-decoration-none btn btn btn-outline-warning
+              btn-sm p-3 mr-1" routerLink='/admin'>Admin</a>
+      </div>
+
       <div class="col-md-12 justify-content-center d-flex">
         <a routerLink='/sobre' type="button" class="btn btn btn-outline-warning
             btn-sm p-3 mr-1
@@ -56,4 +61,3 @@
 <div class="footer-copyright bg-dark text-center py-3 ">
   <span class="text-light"> © 2020 Copyright: </span>
 </div>
-<!-- /Copyright -->
