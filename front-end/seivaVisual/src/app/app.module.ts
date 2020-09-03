@@ -13,6 +13,7 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { FeedComponent } from './feed/feed.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FeedComponent } from './feed/feed.component';
     EquipeComponent,
     SobreComponent,
     PostTemaComponent,
-    FeedComponent
+    FeedComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
