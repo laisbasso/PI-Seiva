@@ -78,11 +78,19 @@
                     </div>
                     <div class="col-md-4 d-flex justify-content-end">
 
+<<<<<<< HEAD
                       <button class="mr-3 btn btn-outline-info">
                         Editar
                       </button>
 
                       <button class="btn btn-outline-danger ml-3">
+=======
+                      <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-postagem', item.id]">
+                        Editar
+                      </button>
+
+                      <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-postagem', item.id]">
+>>>>>>> 315bc50d178a3cbe723b55d6376bf363033bc0c3
                         Apagar
                       </button>
 
@@ -93,7 +101,12 @@
                 <div class="card-body">
                   <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
                   <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+<<<<<<< HEAD
                     Postado em {{item.data}} </small>
+=======
+                    Postado em {{item.data | date:'dd/MM/yyyy'}} às
+                    {{item.data | date:'HH:mm'}}</small>
+>>>>>>> 315bc50d178a3cbe723b55d6376bf363033bc0c3
                 </div>
               </div>
 

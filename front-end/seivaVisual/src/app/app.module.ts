@@ -6,14 +6,24 @@ import { OrderModule } from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HomeInicioComponent } from './home-inicio/home-inicio.component';
 import { FooterComponent } from './footer/footer.component';
-import { EquipeComponent } from './equipe/equipe.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FeedComponent } from './feed/feed.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
 import { SobreComponent } from './sobre/sobre.component';
+<<<<<<< HEAD
 import { PostTemaComponent } from './post-tema/post-tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { AdminComponent } from './admin/admin.component';
+=======
+import { EquipeComponent } from './equipe/equipe.component';
+import { HomeInicioComponent } from './home-inicio/home-inicio.component';
+import { AdminComponent } from './admin/admin.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+>>>>>>> 315bc50d178a3cbe723b55d6376bf363033bc0c3
 
 @NgModule({
   declarations: [
@@ -24,7 +34,15 @@ import { AdminComponent } from './admin/admin.component';
     SobreComponent,
     PostTemaComponent,
     FeedComponent,
+<<<<<<< HEAD
     AdminComponent
+=======
+    AdminComponent,
+    DeleteTemaComponent,
+    DeletePostagemComponent,
+    PutTemaComponent,
+    PutPostagemComponent
+>>>>>>> 315bc50d178a3cbe723b55d6376bf363033bc0c3
   ],
   imports: [
     BrowserModule,
