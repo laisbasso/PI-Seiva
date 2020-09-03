@@ -14,6 +14,10 @@ import { SobreComponent } from './sobre/sobre.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { HomeInicioComponent } from './home-inicio/home-inicio.component';
 import { AdminComponent } from './admin/admin.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { AdminComponent } from './admin/admin.component';
     SobreComponent,
     PostTemaComponent,
     FeedComponent,
-    AdminComponent
+    AdminComponent,
+    DeleteTemaComponent,
+    DeletePostagemComponent,
+    PutTemaComponent,
+    PutPostagemComponent
   ],
   imports: [
     BrowserModule,
