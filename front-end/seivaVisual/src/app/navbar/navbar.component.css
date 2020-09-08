@@ -2,6 +2,10 @@ button:focus {
   outline: none !important;
 }
 
+#menu-drop{
+    min-width: 600px;
+}
+
 @media all and (min-width: 992px){
   .navbar .nav-item .dropdown-menu {
     display: none;
