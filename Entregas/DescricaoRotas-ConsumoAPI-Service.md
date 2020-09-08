@@ -62,11 +62,11 @@ As model's criadas precisam possuir os atributos iguais aos do declarados pelo b
         public token: string
     }
 
-## Service  
+## Service - EndPoint's
 Criado os serviços:  
 **auth** autenticação para logar e cadastrar-se, possuindo os eventos de 'btnSair()' e 'admin()';  
-**postagem** com os end-point's GET, GETByID, POST, PUT e DELETE, possuindo os eventos de 'btnSair()' e 'btnLogin()';  
-**tema** com os end-point's GET, GETByID, POST, PUT e DELETE.
+**postagem** com os endpoint's GET, GETByID, POST, PUT e DELETE, possuindo os eventos de 'btnSair()' e 'btnLogin()';  
+**tema** com os endpoint's GET, GETByID, POST, PUT e DELETE.
 
 ### auth.service.ts 
 
