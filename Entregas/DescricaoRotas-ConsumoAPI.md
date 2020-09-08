@@ -60,7 +60,7 @@ As model's criadas precisam possuir os atributos iguais aos do declarados pelo b
         public usuario: string;
         public senha: string;
         public token: string
-}
+    }
 
 ## Service  
 Criado os serviços:  
@@ -70,8 +70,8 @@ Criado os serviços:
 
 ### auth.service.ts 
 
-export class AuthService {
-  constructor(private http: HttpClient) { }
+    export class AuthService {
+    constructor(private http: HttpClient) { }
 
     logar(userLogin: UserLogin) {
         return this.http.post('http://localhost:9000/usuario/logar', userLogin)
@@ -97,11 +97,11 @@ export class AuthService {
         }
         return ok
     }
-}
+    }
 
 ### postagem.service.ts
-export class PostagemService {
-  constructor(private http: HttpClient) { }
+    export class PostagemService {
+    constructor(private http: HttpClient) { }
 
     logar(userLogin: UserLogin){
         return this.http.post('http://localhost:9000/usuario/logar', userLogin)
@@ -152,12 +152,12 @@ export class PostagemService {
         }
         return ok
     }
-}
+    }
 
 ### tema.service.ts 
-export class TemaService {
+    export class TemaService {
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
     token = {
         headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
@@ -182,7 +182,7 @@ export class TemaService {
     deleteTema(id: number){
         return this.http.delete(`http://localhost:9000/tema/${id}`, this.token)
     }
-}
+    }
 
 
 
