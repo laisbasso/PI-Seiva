@@ -24,7 +24,10 @@ Nossa ideia foi pensada para ser uma rede social, porque ideologia se vive, não
 
 | Data | Tipo de Entrega | Documentação |
 |------|-----------------|--------------|
-|01/09| [Criação do Componente Feed / End-point GET](https://github.com/laisbasso/PI-Seiva/commit/0ba92b766694fd007f0de0d72491f10702f0f42a "Criação do Componente Feed / End-point GET") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoRotas-ConsumoAPI-Service.md "Descrição")
+|03/09| [EndPoint PUT e DELETE de Postagem e Tema](https://github.com/laisbasso/PI-Seiva/commit/315bc50d178a3cbe723b55d6376bf363033bc0c3 "EndPoint PUT e DELETE de Postagem e Tema") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoRotas-ConsumoAPI-Service.md "Descrição")
+|02/09| [EndPoint POST de Postagem e Tema / Criação do componente Admin](https://github.com/laisbasso/PI-Seiva/commit/14678f63f7b57dea97dd9947fea7d8aec932c781 "EndPoint POST de Postagem e Tema / Criação do componente Admin") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoRotas-ConsumoAPI-Service.md "Descrição")
+
+|01/09| [Criação do Componente Feed / EndPoint GET](https://github.com/laisbasso/PI-Seiva/commit/0ba92b766694fd007f0de0d72491f10702f0f42a "Criação do Componente Feed / End-point GET") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoRotas-ConsumoAPI-Service.md "Descrição")
 |31/08| [Implementação de Rotas / Consumo da API](https://github.com/laisbasso/PI-Seiva/commit/3b56569de2e4f439ad135d178d0b0e493fc8d83a "Implementação de Rotas / Consumo da API") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoRotas-ConsumoAPI-Service.md "Descrição")
 |27/08| [Descrição do Projeto Angular](https://github.com/laisbasso/PI-Seiva/commit/598ed60888be9fa485e8461f8cf4ea36e0059549 "Descrição do Projeto Angular") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoAngular.md "Descrição")
 |27/08| [Descrição da Estrutura Front-end](https://github.com/laisbasso/PI-Seiva/commit/598ed60888be9fa485e8461f8cf4ea36e0059549 "Descrição da Estrutura Front-end") | [Descrição](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DescricaoEstruturaFrontEnd.md "Descrição")
