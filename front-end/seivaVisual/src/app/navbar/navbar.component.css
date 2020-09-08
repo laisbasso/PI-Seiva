@@ -17,3 +17,9 @@ button:focus {
     margin-top: 0;
   }
 }
+
+@media (max-width: 991px){
+    #search{
+        display: none;
+    }
+}

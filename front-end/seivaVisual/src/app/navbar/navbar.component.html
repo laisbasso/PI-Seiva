@@ -1,14 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img class="navbar-brand" src="../../assets/img/logo-seiva.png" width="100"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarTogglerDemo02">
-        <ul class="navbar-nav">
+
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+        data-target="#collapseMenu" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation" id="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+    <form class="form-inline my-2 my-lg-0" id="search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+
+    <div class="collapse navbar-collapse d-flex justify-content-end" target="collapseMenu">
+        <ul class="navbar-nav" id="collapseMenu">
 
             <li class="nav-item dropdown">
-                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">Eventos</a>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="navbarTogglerDemo02">Eventos</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <div class=" d-flex flex-wrap text-center justify-content-center" id="menu-drop">
                         <button class="btn btn-outline-success rounded-pill m-1"> Ongs </button>
@@ -34,7 +40,7 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">Cursos</a>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Cursos</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <div class=" d-flex flex-wrap text-center justify-content-center" id="menu-drop">
                         <button class="btn btn-outline-success rounded-pill m-1"> Ongs </button>
@@ -60,7 +66,7 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">Projetos</a>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Projetos</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <div class=" d-flex flex-wrap text-center justify-content-center" id="menu-drop">
                         <button class="btn btn-outline-success rounded-pill m-1"> Ongs </button>
@@ -86,7 +92,7 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">Vagas</a>
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Vagas</a>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <div class=" d-flex flex-wrap text-center justify-content-center" id="menu-drop">
                         <button class="btn btn-outline-success rounded-pill m-1"> Ongs </button>
