@@ -1,6 +1,41 @@
-<!-- Carousel -->
+<!-- NAVBAR -->
 
-<div class="container-fluid positionContainer p-0 w-100">
+<nav class="navbar navbar-expand-lg navbar-light bg-white ml-5 mr-5 p-3 menu">
+    <a class="navbar-brand" href="#">
+        <img src="https://i.imgur.com/tlxWFmB.png" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"> <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Equipe/Sobre nós</a>
+            </li>
+
+        </ul>
+        <div class="form-group form-inline my-2 my-lg-0 mr-sm-2">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" [(ngModel)]="userLogin.usuario">
+        </div>
+
+        <div class="form-group form-inline my-2 my-lg-0 mr-sm-2">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" [(ngModel)]="userLogin.senha">
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-success w-10 " (click)="entrar()">Entrar</button>
+        </div>
+    </div>
+</nav>
+
+<!-- /NAVBAR -->
+
+<!-- CAROUSEL -->
+
+<div class="container-fluid p-0 w-100">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -9,13 +44,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://i.imgur.com/v5KSOBL.jpg" alt="Primeiro Slide">
+                <img class="d-block w-100" src="https://i.imgur.com/aLr6Bt2.jpg" alt="Primeiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <img src="https://i.imgur.com/UHZY4Le.png" width="186" height="47" alt="">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                    <p> Dolorem optio, adipisci delectus molestiae, enim harum nulla exercitationem sint facilis nostrum minus odio excepturi, tenetur quod minima. Temporibus tempora quo quos!</p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/knSRRYJ.jpg" alt="Segundo Slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/9i6aOht.jpg" alt="Terceiro Slide">
+                <img class="d-block w-100" src="https://i.imgur.com/KhCLYMP.jpg" alt="Segundo Slide">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <img src="https://i.imgur.com/UHZY4Le.png" width="186" height="47" alt="">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                    <p> Dolorem optio, adipisci delectus molestiae, enim harum nulla exercitationem sint facilis nostrum minus odio excepturi, tenetur quod minima. Temporibus tempora quo quos!</p>
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -29,66 +72,20 @@
     </div>
 </div>
 
-<!-- /Carousel -->
+<!-- /CAROUSEL -->
+
+<!-- SOBRE NÓS -->
+<app-sobre></app-sobre>
+<!-- /SOBRE NÓS -->
+
+<!-- EQUIPE -->
+<app-equipe></app-equipe>
+<!-- /EQUIPE -->
 
 <!-- FORMULÁRIO -->
-
-<div *ngIf="cadastro;else login">
-      <div class="d-flex bd-highlight position">
-        <div class="row mt">
-            <div class="col bgColor p-5 form">
-                <div>
-                    <div class="form-group ">
-                        <label for="exampleInputEmail1">Nome completo</label>
-                        <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp"
-                            placeholder="Nome completo" [(ngModel)]='user.nome'>
-                        <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="nome@exemplo.com" [(ngModel)]='user.usuario'>
-                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" (input)="conferirSenha ($event)" value="{{senha}}">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword2">Confirmar senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirmar senha" [(ngModel)]='user.senha'>
-                    </div>
-                    <div class="form-group form-check">
-                        <a (click)=logar()>Login</a>
-                    </div>
-                    <button type="submit" (click)="cadastrar()" class="btn btn-warning">Enviar</button>
-                </div>
-            </div>
-        </div>
-    </div>  
-</div>
-
-<ng-template #login>
-    <div class="d-flex bd-highlight position">
-        <div class="row mt">
-            <div class="col bgColor p-5 form">
-                <div>
-                    <div class="form-group ">
-                        <label for="exampleInputEmail1">Endereço de email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Seu email" [(ngModel)]='userLogin.usuario'>
-                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
-                            ninguém.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" [(ngModel)]='userLogin.senha'>
-                    </div>
-                    <div class="form-group form-check">
-                        <a (click)=cadastrase()>Cadastrar</a>
-                    </div>
-                    <button type="submit" class="btn btn-outline-success w-25 " (click)='entrar()'>Entrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</ng-template>
-
+<app-cadastro></app-cadastro>
 <!-- /FORMULÁRIO -->
+
+<div id="voltarTopo">
+    <a href="#" id="subir" type="button" class="btn btn-outline-warning"> &#9650; </a>
+</div>
