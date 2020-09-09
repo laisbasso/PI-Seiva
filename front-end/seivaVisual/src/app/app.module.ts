@@ -19,6 +19,7 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     DeletePostagemComponent,
     PutTemaComponent,
     PutPostagemComponent,
-    CadastroComponent
+    CadastroComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
