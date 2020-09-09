@@ -1,0 +1,14 @@
+#temas a{
+    color: tomato;
+    transition: 0.3s;
+}
+
+#temas a:hover {
+    transform: scale(1.05);
+}
+
+#temas .card{
+    background-image: url(https://image.freepik.com/vetores-gratis/limao-com-folhas-inteiras-e-rodelas-de-limoes-ilustracao-perfeita-ilustracao-para-cartaz-decorativo-produto-natural-emblema-mercado-dos-fazendeiros_257455-295.jpg);
+    height: 19rem;
+    width: 19rem;
+}

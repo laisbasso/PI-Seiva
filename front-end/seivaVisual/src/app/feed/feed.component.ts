@@ -22,7 +22,6 @@ export class FeedComponent implements OnInit {
 
   idTema: number
 
-
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService
@@ -69,3 +68,4 @@ export class FeedComponent implements OnInit {
     })
   }
 }
+
