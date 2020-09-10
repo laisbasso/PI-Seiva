@@ -3,68 +3,19 @@
 <!-- CONTAINER -->
 <div class="container mt-5 mb-5 pt-5">
 
-<!-- CARDS -->
+  <!-- CARDS -->
   <div class="row">
 
     <div class="pl-5 display-4 mb-5"> Navegue pelos temas! </div>
 
     <div class="col-md-12 d-flex justify-content-around flex-wrap" id="temas">
 
-      <a href="#" class="mt-2 text-decoration-none">
+      <a href="#" class="mt-2 text-decoration-none" *ngFor='let item of listaTemas'>
         <div class="card border-0 shadow p-3 mb-5 bg-white rounded">
           <div class="card-body">
-            <h3 class="card-title">Entretenimento</h3>
-            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="mt-2 text-decoration-none">
-        <div class="card border-0 shadow p-3 mb-5 bg-white rounded">
-          <div class="card-body">
-            <h3 class="card-title">Entretenimento</h3>
-            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="mt-2 text-decoration-none">
-        <div class="card border-0 shadow p-3 mb-5 bg-white rounded">
-          <div class="card-body">
-            <h3 class="card-title">Entretenimento</h3>
-            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="mt-2 text-decoration-none">
-        <div class="card border-0 shadow p-3 mb-5 bg-white rounded">
-          <div class="card-body">
-            <h3 class="card-title">Entretenimento</h3>
-            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="mt-2 text-decoration-none">
-        <div class="card border-0 shadow p-3 mb-5 bg-white rounded">
-          <div class="card-body">
-            <h3 class="card-title">Entretenimento</h3>
-            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="mt-2 text-decoration-none">
-        <div class="card border-0 shadow p-3 mb-5 bg-white rounded">
-          <div class="card-body">
-            <h3 class="card-title">Entretenimento</h3>
-            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's
+            <h3 class="card-title">{{item.descricao}}</h3>
+            <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of
+              the card's
               content.</p>
           </div>
         </div>
@@ -77,105 +28,110 @@
   <!-- POSTAGEM -->
   <div class="row" id="postagem">
 
-  <div class="col-md-7 mb-5 mt-5">
+    <div class="col-md-7 mb-5 mt-5">
 
-    <div class="display-4 pl-0 mb-3"> Vamos falar sobre música hoje? </div>
+      <div class="display-4 pl-0 mb-3"> Vamos falar sobre música hoje? </div>
 
-    <div class="form-group">
-      <label class="" for="titulo">Título:</label>
-      <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
-        [(ngModel)]='postagem.titulo'>
-    </div>
-
-    <div class="form-group">
-      <label class="" for="texto">Texto:</label>
-      <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
-        [(ngModel)]='postagem.descricao'></textarea>
-    </div>
-
-    <div class="row d-flex align-items-end">
-      <div class="col-md-6">
-        <div class="form-group m-0">
-          <label class="" for="tema">Escolha um tema ou <a routerLink='/cadastro-tema'>Cadastre um
-              novo</a></label>
-          <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-            <option *ngFor='let item of listaTemas' value={{item.id}}>
-              {{item.descricao}}
-            </option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label class="" for="titulo">Título:</label>
+        <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+          [(ngModel)]='postagem.titulo'>
       </div>
-      
+
+      <div class="form-group">
+        <label class="" for="texto">Texto:</label>
+        <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
+          [(ngModel)]='postagem.descricao'></textarea>
+      </div>
+
+      <div class="row d-flex align-items-end">
+        <div class="col-md-6">
+          <div class="form-group m-0">
+            <label class="" for="tema">Escolha um tema</label>
+            <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+              <option *ngFor='let item of listaTemas' value={{item.id}}>
+                {{item.descricao}}
+              </option>
+            </select>
+          </div>
+        </div>
+
         <button type="button" class="btn btn-outline-warning w-25" (click)='publicar()'>
           Publicar
         </button>
+      </div>
+
     </div>
 
-</div>
-
-<!-- IMAGEM -->
-<div class="col-md-4 mt-5">
-      <img class="img-fluid" src="https://image.freepik.com/vetores-gratis/limao-com-folhas-inteiras-e-rodelas-de-limoes-ilustracao-perfeita-ilustracao-para-cartaz-decorativo-produto-natural-emblema-mercado-dos-fazendeiros_257455-295.jpg" width="450" alt="" srcset="">
+    <!-- IMAGEM -->
+    <div class="col-md-4 mt-5">
+      <img class="img-fluid" id="img-post"
+        src="https://image.freepik.com/vetores-gratis/limao-com-folhas-inteiras-e-rodelas-de-limoes-ilustracao-perfeita-ilustracao-para-cartaz-decorativo-produto-natural-emblema-mercado-dos-fazendeiros_257455-295.jpg"
+        width="450" alt="" srcset="">
     </div>
   </div>
   <!-- /IMAGEM -->
-<!-- /POSTAGEM -->
+  <!-- /POSTAGEM -->
 
-<!-- BUSCA TÍTULO -->
+  <!-- BUSCA TÍTULO -->
 
-<div class="row">
-  
-  <div class="col-md-12">
-    <hr class="mt-5 mb-5" />
+  <div class="row">
 
-    <div class="display-4 pl-0 mb-5"> Pesquisar por título </div>
- 
-        <div class="row mt-3 mb-3 mt-3">
-          <div class="col-md-3">
-            <input class="form-control w-100" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar" [(ngModel)]='titulo'>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-outline-warning w-100" typoe="button" (click)='findByTituloPostagem()'>Pesquisar</button>
-          </div>
+    <div class="col-md-12">
+      <hr class="mt-5 mb-5" />
+
+      <div class="display-4 pl-0 mb-5"> Pesquisar por título </div>
+
+      <div class="row mt-3 mb-3 mt-3">
+        <div class="col-md-3">
+          <input class="form-control w-100" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar"
+            [(ngModel)]='titulo'>
         </div>
+        <div class="col-md-2">
+          <button class="btn btn-outline-warning w-100" typoe="button"
+            (click)='findByTituloPostagem()'>Pesquisar</button>
+        </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-around flex-wrap">
 
-            <div class="card mt-5 mb-5" *ngFor="let item of listaPostagens | orderBy : key : reverse">
-              <div class="card-header">
-                <div class="row d-flex align-items-center">
-                  <div class="col-md-8">
-                    <h5 class="card-title">{{item.titulo}}</h5>
-                    <small>Tema: {{item.tema.descricao}}</small>
-                  </div>
-                  <div class="col-md-4 d-flex justify-content-end">
-
-                    <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-postagem', item.id]">
-                      Editar
-                    </button>
-
-                    <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-postagem', item.id]">
-                      Apagar
-                    </button>
-
-                  </div>
+          <div class="card mt-5 mb-5" *ngFor="let item of listaPostagens | orderBy : key : reverse">
+            <div class="card-header">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-8">
+                  <h5 class="card-title">{{item.titulo}}</h5>
+                  <small>Tema: {{item.tema.descricao}}</small>
                 </div>
-              </div>
 
-              <div class="card-body">
-                <p class="card-text" aria-describedby="texto"> {{item.descricao}} </p>
-                <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                  Postado em {{item.data | date:'dd/MM/yyyy'}} às
-                  {{item.data | date:'HH:mm'}}</small>
               </div>
             </div>
+
+            <div class="card-body">
+              <p class="card-text" aria-describedby="texto"> {{item.descricao}} </p>
+              <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
+                Postado em {{item.data | date:'dd/MM/yyyy'}} às
+                {{item.data | date:'HH:mm'}}</small>
+            </div>
+
+            <div class="col d-flex justify-content-around mb-3">
+
+              <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-postagem', item.id]">
+                Editar
+              </button>
+
+              <button class="btn btn-outline-danger ml-3" [routerLink]="['/deletar-postagem', item.id]">
+                Apagar
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
+    </div>
 
-      </div>
-<!-- /BUSCA TÍTULO -->
+  </div>
+  <!-- /BUSCA TÍTULO -->
 
 </div>
 <!-- /CONTAINER -->
