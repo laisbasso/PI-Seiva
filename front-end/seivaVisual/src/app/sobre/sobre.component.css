@@ -1,7 +1,31 @@
-.jumbotron {
+.jbsobre {
     background-image: url('https://i.imgur.com/MvfUgbf.png');
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
    }
+
+.jbitens {
+    background-color: white;
+}
+
+.areia {
+    background-color: #F2C1AE;
+}
+
+.indigo {
+    background-color: #260259;
+}
+
+.coral {
+    background-color: #F25052;
+}
+
+.zuzu {
+    background-color: #8AD8DC;
+}
+
+.lilas {
+    background-color: #7241A4;
+}

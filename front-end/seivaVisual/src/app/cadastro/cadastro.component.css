@@ -1,5 +1,5 @@
 .container-fluid{
-    background-image: url('https://i.imgur.com/wCyUEZY.png');
+    background-image: url('https://i.imgur.com/lSU6dbM.png');
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -7,4 +7,14 @@
     max-height: 100%;
     width: auto;
     height: auto;
+    }
+    
+    #subir {
+        position: relative;
+        right: 10px;
+        bottom: 50px;
+        padding: 10px 30px 10px 30px;
+        text-align: center;
+        scroll-behavior: smooth;
+        transition: .4s;
     }

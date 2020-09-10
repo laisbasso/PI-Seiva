@@ -21,6 +21,7 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AlertsComponent } from './alerts/alerts.component';
+import { BotaoLateralComponent } from './botao-lateral/botao-lateral.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AlertsComponent } from './alerts/alerts.component';
     PutTemaComponent,
     PutPostagemComponent,
     CadastroComponent,
-    AlertsComponent
+    AlertsComponent,
+    BotaoLateralComponent
   ],
   imports: [
     BrowserModule,

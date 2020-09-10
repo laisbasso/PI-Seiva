@@ -1,6 +1,5 @@
 a {
     cursor: pointer;
-    color: blueviolet;
 }
 
 .positionContainer {
@@ -33,12 +32,6 @@ a {
     background-color: orangered;
 }
 
-#subir {
-    position: fixed;
-    right: 10px;
-    bottom: 50px;
-    padding: 10px 30px 10px 30px;
-    text-align: center;
-    scroll-behavior: smooth;
-    transition: .4s;
-}
+.bege {
+    background-color: #F2C6B6;
+  }
