@@ -23,27 +23,10 @@ ul.social-network {
   color: #000000;
   }
 
-/*   .body{ 
-    background-color: #ffffff; 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0.788)), url("./img/bg.png");
-    background-repeat: no-repeat;
-} */
-
-.parallax {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://blush.ly/ZXorSaiLo/p");
-
-  min-height: 500px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-img {
-  opacity: 0.7;
-}
-
-img:hover {
-  opacity: 1.0;
-}
+  img {
+    opacity: 0.7;
+  }
+  
+  img:hover {
+    opacity: 1.0;
+  }
