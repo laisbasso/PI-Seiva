@@ -10,11 +10,13 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><img class="rounded-circle ml-5"
                         width="40" src="../../assets/img/lais.png"></a>
-                <ul class="dropdown-menu dropdown-menu-right">
+                
+                    
                     <div *ngIf='auth.btnSair()' class="d-flex flex-wrap text-center justify-content-center" id="menu-drop">
+                        <ul class="dropdown-menu dropdown-menu-right">
                         <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </li>
         </ul>
 

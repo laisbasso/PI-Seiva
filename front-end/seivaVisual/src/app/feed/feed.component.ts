@@ -16,6 +16,7 @@ export class FeedComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  titulo: string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -54,6 +55,16 @@ export class FeedComponent implements OnInit {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
+  }
+
+  findByTituloPostagem(){
+    if(this.titulo === ''){
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
   }
 
   findAllTemas() {

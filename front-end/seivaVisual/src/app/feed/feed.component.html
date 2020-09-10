@@ -1,8 +1,13 @@
+<app-navbar></app-navbar>
+
 <!-- CONTAINER -->
 <div class="container mt-5 mb-5 pt-5">
 
 <!-- CARDS -->
   <div class="row">
+
+    <div class="pl-5 display-4 mb-5"> Navegue pelos temas! </div>
+
     <div class="col-md-12 d-flex justify-content-around flex-wrap" id="temas">
 
       <a href="#" class="mt-2 text-decoration-none">
@@ -70,20 +75,26 @@
   <!-- /CARDS -->
 
   <!-- POSTAGEM -->
-  <div class="row">
+  <div class="row" id="postagem">
 
-  <div class="col-md-8 mt-5">
+  <div class="col-md-7 mb-5 mt-5">
 
     <div class="display-4 pl-0 mb-3"> Vamos falar sobre música hoje? </div>
 
     <div class="form-group">
+      <label class="" for="titulo">Título:</label>
+      <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+        [(ngModel)]='postagem.titulo'>
+    </div>
+
+    <div class="form-group">
       <label class="" for="texto">Texto:</label>
-      <textarea class="form-control col-md-7" id="texto" rows="4" placeholder="Digite aqui o seu texto"
+      <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
         [(ngModel)]='postagem.descricao'></textarea>
     </div>
 
     <div class="row d-flex align-items-end">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="form-group m-0">
           <label class="" for="tema">Escolha um tema ou <a routerLink='/cadastro-tema'>Cadastre um
               novo</a></label>
@@ -100,36 +111,33 @@
         </button>
     </div>
 
-    
-
 </div>
+
+<!-- IMAGEM -->
 <div class="col-md-4 mt-5">
-      <img src="https://image.freepik.com/vetores-gratis/limao-com-folhas-inteiras-e-rodelas-de-limoes-ilustracao-perfeita-ilustracao-para-cartaz-decorativo-produto-natural-emblema-mercado-dos-fazendeiros_257455-295.jpg" width="200" alt="" srcset="">
+      <img class="img-fluid" src="https://image.freepik.com/vetores-gratis/limao-com-folhas-inteiras-e-rodelas-de-limoes-ilustracao-perfeita-ilustracao-para-cartaz-decorativo-produto-natural-emblema-mercado-dos-fazendeiros_257455-295.jpg" width="450" alt="" srcset="">
     </div>
   </div>
+  <!-- /IMAGEM -->
 <!-- /POSTAGEM -->
 
 <!-- BUSCA TÍTULO -->
-
 
 <div class="row">
   
   <div class="col-md-12">
     <hr class="mt-5 mb-5" />
 
-    <h3>Pesquisar por título</h3>
+    <div class="display-4 pl-0 mb-5"> Pesquisar por título </div>
  
-    
-
         <div class="row mt-3 mb-3 mt-3">
           <div class="col-md-3">
-            <input class="form-control w-100" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar" />
+            <input class="form-control w-100" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar" [(ngModel)]='titulo'>
           </div>
           <div class="col-md-2">
-            <button class="btn btn-outline-warning w-100" type="button"> Pesquisar </button>
+            <button class="btn btn-outline-warning w-100" typoe="button" (click)='findByTituloPostagem()'>Pesquisar</button>
           </div>
         </div>
-
 
         <div class="row">
           <div class="col-md-12">
@@ -156,7 +164,7 @@
               </div>
 
               <div class="card-body">
-                <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
+                <p class="card-text" aria-describedby="texto"> {{item.descricao}} </p>
                 <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                   Postado em {{item.data | date:'dd/MM/yyyy'}} às
                   {{item.data | date:'HH:mm'}}</small>
@@ -169,19 +177,5 @@
       </div>
 <!-- /BUSCA TÍTULO -->
 
-
-
-      <!-- Temas -->
-
-      <div class="tab-pane fade" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
-        <div class="row mt-3 mb-3">
-          <div class="col-md-10 pr-0">
-            <input class="form-control w-100" type="search" placeholder="Pesquisar Postagem" aria-label="Pesquisar" />
-          </div>
-          <div class="col-md-2 pl-0">
-            <button class="btn btn-outline-warning w-100" type="button"> Pesquisar </button>
-          </div>
-        </div>
-
-  </div>
 </div>
+<!-- /CONTAINER -->

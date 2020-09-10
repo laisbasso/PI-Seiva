@@ -12,7 +12,6 @@ export class PostTemaComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
 
-
   constructor(
     private temaService: TemaService,
     private router: Router
@@ -41,17 +40,10 @@ export class PostTemaComponent implements OnInit {
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp
         this.router.navigate(['/feed'])
-
+        alert('Tema cadastrado com sucesso!')
       })
 
     }
-
-    /* else {
-      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
-        this.tema = resp
-        this.router.navigate(['/feed'])
-        alert('Tema cadastrado com sucesso!')
-      }) */
   }
 }
 

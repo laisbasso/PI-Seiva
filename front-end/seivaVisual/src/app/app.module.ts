@@ -36,7 +36,7 @@ import { AlertsComponent } from './alerts/alerts.component';
     DeletePostagemComponent,
     PutTemaComponent,
     PutPostagemComponent,
-    NavbarComponent
+    NavbarComponent,
     CadastroComponent,
     AlertsComponent
   ],
