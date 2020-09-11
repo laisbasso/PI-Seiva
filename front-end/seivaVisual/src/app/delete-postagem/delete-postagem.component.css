@@ -1,0 +1,11 @@
+.icon {
+    width: 25px;
+  }
+  
+  #settings-post a:hover{
+    font-weight: bold;
+  }
+  
+  .dropdown-menu {
+    min-width: inherit;
+  }

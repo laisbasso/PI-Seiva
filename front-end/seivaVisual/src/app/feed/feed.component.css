@@ -1,14 +1,54 @@
-#temas a{
-    color: tomato;
-    transition: 0.3s;
+/* CARDS TEMAS */
+
+#temas .card {
+  height: 12rem;
+  width: 12rem;
+  background-image: url(../../assets/img/tema-img.png);
+  background-size: contain;
 }
 
-#temas a:hover {
-    transform: scale(1.05);
+.subir-card {
+  transition: 0.3s;
 }
 
-#temas .card{
-    background-image: url(https://image.freepik.com/vetores-gratis/limao-com-folhas-inteiras-e-rodelas-de-limoes-ilustracao-perfeita-ilustracao-para-cartaz-decorativo-produto-natural-emblema-mercado-dos-fazendeiros_257455-295.jpg);
-    height: 19rem;
-    width: 19rem;
+.subir-card:hover {
+  transform: scale(1.05);
+}
+
+/* POSTAGENS */
+
+.icon {
+  width: 25px;
+}
+
+#settings-post a:hover{
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  min-width: inherit;
+}
+
+/* CORES */
+
+.seiva-pink {
+  color: #d90b31;
+}
+
+.seiva-vinho {
+  color: #A8262C;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px){
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 575px){
+  .card-columns {
+    column-count: 1;
+  }
 }

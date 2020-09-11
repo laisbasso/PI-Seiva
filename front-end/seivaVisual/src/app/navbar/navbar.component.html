@@ -1,20 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img class="navbar-brand" src="../../assets/img/logo-seiva.png" width="100"></a>
-
-    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
-        data-target="#collapseMenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-        id="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand"><img class="navbar-brand" src="../../assets/img/logo-seiva.png" width="100"></a>
 
     <div class="collapse navbar-collapse d-flex justify-content-end" target="collapseMenu">
         <ul class="navbar-nav" id="collapseMenu">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><img class="rounded-circle ml-5"
-                        width="40" src="../../assets/img/lais.png"></a>
-                
-                    
-                    <div *ngIf='auth.btnSair()' class="d-flex flex-wrap text-center justify-content-center" id="menu-drop">
-                        <ul class="dropdown-menu dropdown-menu-right">
-                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+                <a class="nav-link" href="#" data-toggle="dropdown"><img class="rounded-circle ml-5" width="40"
+                        src="../../assets/img/profile.png"></a>
+
+                <div *ngIf='auth.btnSair()' class="d-flex flex-wrap text-center justify-content-center" id="menu-drop">
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <a class="nav-link font-weight-bold p-2" routerLink='/feed'><img class="icon"
+                                src="../../assets/img/feed.png"><span class="p-1">Feed</span></a>
+
+                        <a *ngIf='auth.admin()' class="nav-link font-weight-bold p-2" routerLink='/admin'><img
+                                class="icon" src="../../assets/img/admin.png"><span>Admin</span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="nav-link font-weight-bold p-2" (click)='sair()'><img class="icon"
+                                src="../../assets/img/logout.png"><span>Logout</span></a>
                     </ul>
                 </div>
             </li>

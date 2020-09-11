@@ -12,7 +12,6 @@ export class PutTemaComponent implements OnInit {
 
   tema: Tema = new Tema()
 
-
   constructor(
     private temaService: TemaService,
     private router: Router,
@@ -37,6 +36,10 @@ export class PutTemaComponent implements OnInit {
       this.router.navigate(['/cadastro-tema'])
       alert('Tema atualizado com sucesso!')
     })
+  }
+
+  btnNao() {
+    this.router.navigate(['/cadastro-tema'])
   }
 
 }

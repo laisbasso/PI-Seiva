@@ -68,4 +68,8 @@ export class PutPostagemComponent implements OnInit {
     })
   }
 
+  btnNao() {
+    this.router.navigate(['/feed'])
+  }
+
 }
