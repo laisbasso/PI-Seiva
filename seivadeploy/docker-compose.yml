@@ -8,9 +8,9 @@ services:
       dockerfile: Dockerfile
     environment:
       TZ: America/Sao_Paulo
-      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: root
-      MYSQL_PASSWORD: root123
+      MYSQL_PASSWORD: root
       MYSQL_DATABASE: db_seiva
     ports:
       - "3308:3306"
@@ -27,7 +27,7 @@ services:
       - ./seiva-api:/seiva-api
       - ~/.m2:/root/.m2
     ports:
-      - "9000:8080"
+      - "8080:8080"
     command: mvn clean spring-boot:run
     links:
       - db
