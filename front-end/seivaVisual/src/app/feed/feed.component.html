@@ -8,9 +8,10 @@
     <div class="col-md-12 d-flex justify-content-around flex-wrap" id="temas">
       <div class="subir-card mt-2 text-decoration-none justify-content-center" *ngFor='let item of listaTemas'>
         <div class="card border-0 shadow p-3 mb-2 bg-white rounded">
-          <div class="card-body text-center mt-3">
-            <h3 class="card-title text-white">{{item.descricao}}</h3>
-          </div>
+          <img class="card-img-overlay w-100 p-0" src="{{item.imagem}}" alt="Card image cap">
+          
+            <h3 class="card-title text-center pt-5 text-light">{{item.descricao}}</h3>
+         
         </div>
       </div>
     </div>
@@ -46,7 +47,7 @@
         </div>
 
         <button class="btn btn-outline-danger w-25 rounded-pill mr-5" (click)="publicar()"><img alt="Publicar"
-          class="icon" src="../../assets/img/post.png"><span class="p-2">Publicar</span></button>
+            class="icon" src="../../assets/img/post.png"><span class="p-2">Publicar</span></button>
       </div>
     </div>
 

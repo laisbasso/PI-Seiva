@@ -1,11 +1,12 @@
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white ml-5 mr-5 p-3 menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-white p-3 menu w-100">
     <a class="navbar-brand" href="#">
         <img src="https://i.imgur.com/tlxWFmB.png" width="30" height="30" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
@@ -19,17 +20,19 @@
 
         </ul>
         <div class="form-group form-inline my-2 my-lg-0 mr-sm-2">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" [(ngModel)]="userLogin.usuario">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Seu email" [(ngModel)]="userLogin.usuario">
         </div>
 
         <div class="form-group form-inline my-2 my-lg-0 mr-sm-2">
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" [(ngModel)]="userLogin.senha">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
+                [(ngModel)]="userLogin.senha">
         </div>
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-outline-success w-10 " (click)="entrar()">Entrar</button>
         </div>
-        
-        <div >
+
+        <div>
             <a class="nav-link" href="#" id="cadastro"> Cadastre-se! </a>
         </div>
 
@@ -49,7 +52,7 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner w-100">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="https://i.imgur.com/kKHq5QK.png" alt="Primeiro Slide">
             </div>
@@ -58,17 +61,17 @@
                 <img class="d-block w-100" src="https://i.imgur.com/dMPEvhM.png" alt="Segundo Slide">
             </div>
 
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://i.imgur.com/OXx1XKH.png" alt="Terceiro Slide">
-                </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/OXx1XKH.png" alt="Terceiro Slide">
+            </div>
 
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://i.imgur.com/xgsMA5j.png" alt="Quarto Slide">
-                </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/xgsMA5j.png" alt="Quarto Slide">
+            </div>
 
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://i.imgur.com/1rXweln.png" alt="Quinto Slide">
-                </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/1rXweln.png" alt="Quinto Slide">
+            </div>
 
         </div>
 
@@ -90,7 +93,11 @@
 <!-- /SOBRE NÓS -->
 
 <!-- EQUIPE -->
-<app-equipe></app-equipe>
+<div class="row w-100">
+    <div class="col-md-12">
+        <app-equipe></app-equipe>
+    </div>
+</div>
 <!-- /EQUIPE -->
 
 <!-- FORMULÁRIO -->

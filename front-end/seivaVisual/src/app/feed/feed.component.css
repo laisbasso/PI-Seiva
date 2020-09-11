@@ -3,8 +3,10 @@
 #temas .card {
   height: 12rem;
   width: 12rem;
-  background-image: url(../../assets/img/tema-img.png);
-  background-size: contain;
+}
+
+.card-title{
+  z-index: 1;
 }
 
 .subir-card {
