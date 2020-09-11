@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AlertsComponent } from './alerts/alerts.component';
+import { BotaoLateralComponent } from './botao-lateral/botao-lateral.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { AlertsComponent } from './alerts/alerts.component';
     PutPostagemComponent,
     NavbarComponent,
     CadastroComponent,
-    AlertsComponent
+    AlertsComponent,
+    BotaoLateralComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { AlertsComponent } from './alerts/alerts.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

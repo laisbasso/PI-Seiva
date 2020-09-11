@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#"> <span class="sr-only">(página atual)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#sobre">Equipe/Sobre nós</a>
+                <a class="nav-link" href="#" id="sobre">Equipe/Sobre nós</a>
             </li>
 
         </ul>
@@ -28,6 +28,11 @@
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-outline-success w-10 " (click)="entrar()">Entrar</button>
         </div>
+        
+        <div >
+            <a class="nav-link" href="#" id="cadastro"> Cadastre-se! </a>
+        </div>
+
     </div>
 </nav>
 
@@ -41,26 +46,32 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://i.imgur.com/aLr6Bt2.jpg" alt="Primeiro Slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <img src="https://i.imgur.com/UHZY4Le.png" width="186" height="47" alt="">
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p> Dolorem optio, adipisci delectus molestiae, enim harum nulla exercitationem sint facilis nostrum minus odio excepturi, tenetur quod minima. Temporibus tempora quo quos!</p>
-                </div>
+                <img class="d-block w-100" src="https://i.imgur.com/kKHq5QK.png" alt="Primeiro Slide">
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/KhCLYMP.jpg" alt="Segundo Slide">
-                <div class="carousel-caption d-none d-md-block">
 
-                    <img src="https://i.imgur.com/UHZY4Le.png" width="186" height="47" alt="">
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                    <p> Dolorem optio, adipisci delectus molestiae, enim harum nulla exercitationem sint facilis nostrum minus odio excepturi, tenetur quod minima. Temporibus tempora quo quos!</p>
-                </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/dMPEvhM.png" alt="Segundo Slide">
             </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://i.imgur.com/OXx1XKH.png" alt="Terceiro Slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://i.imgur.com/xgsMA5j.png" alt="Quarto Slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://i.imgur.com/1rXweln.png" alt="Quinto Slide">
+                </div>
+
         </div>
+
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Anterior</span>
@@ -86,6 +97,6 @@
 <app-cadastro></app-cadastro>
 <!-- /FORMULÁRIO -->
 
-<div id="voltarTopo">
-    <a href="#" id="subir" type="button" class="btn btn-outline-warning"> &#9650; </a>
-</div>
+<!-- BOTÃO LATERAL -->
+<app-botao-lateral></app-botao-lateral>
+<!-- BOTÃO LATERAL -->
