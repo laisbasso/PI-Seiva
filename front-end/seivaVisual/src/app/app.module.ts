@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,10 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { AlertsComponent } from './alerts/alerts.component';
+import { BotaoLateralComponent } from './botao-lateral/botao-lateral.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,11 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
     DeleteTemaComponent,
     DeletePostagemComponent,
     PutTemaComponent,
-    PutPostagemComponent
+    PutPostagemComponent,
+    NavbarComponent,
+    CadastroComponent,
+    AlertsComponent,
+    BotaoLateralComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +49,8 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

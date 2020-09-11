@@ -1,0 +1,33 @@
+button:focus {
+  outline: none !important;
+}
+
+.dropdown-menu img{
+  width: 25px;
+}
+
+.dropdown-menu {
+  min-width:inherit;
+}
+
+.navbar a:hover{
+  cursor: pointer;
+}
+
+@media all and (min-width: 992px){
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 991px){
+    #search{
+        display: none;
+    }
+}

@@ -1,4 +1,9 @@
-a{
+html, body{
+    margin:0;
+    padding: 0;
+}
+
+a {
     cursor: pointer;
 }
 
@@ -31,3 +36,7 @@ a{
 .btnColor {
     background-color: orangered;
 }
+
+.bege {
+    background-color: #F2C6B6;
+  }

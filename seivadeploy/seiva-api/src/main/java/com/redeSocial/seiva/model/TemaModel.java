@@ -25,11 +25,14 @@ public class TemaModel {
 	@NotNull
 	@Size(min = 3, max = 15)
 	private String descricao;
+	
+	private String imagem; 
 
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.PERSIST)
 	@JsonIgnoreProperties("tema")
 	private List<PostagemModel> postagem;
-
+	
+	
 	public long getId() {
 		return id;
 	}
@@ -45,7 +48,15 @@ public class TemaModel {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	public String getImagem() {
+		return imagem;
+	}
 
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+	
 	public List<PostagemModel> getPostagem() {
 		return postagem;
 	}

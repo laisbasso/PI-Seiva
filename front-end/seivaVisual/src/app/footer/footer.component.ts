@@ -24,9 +24,4 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sair() {
-    this.router.navigate(['/home-inicio'])
-    localStorage.clear()
-  }
-
 }

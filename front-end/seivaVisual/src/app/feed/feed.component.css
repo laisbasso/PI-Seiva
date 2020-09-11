@@ -1,0 +1,56 @@
+/* CARDS TEMAS */
+
+#temas .card {
+  height: 12rem;
+  width: 12rem;
+}
+
+.card-title{
+  z-index: 1;
+}
+
+.subir-card {
+  transition: 0.3s;
+}
+
+.subir-card:hover {
+  transform: scale(1.05);
+}
+
+/* POSTAGENS */
+
+.icon {
+  width: 25px;
+}
+
+#settings-post a:hover{
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  min-width: inherit;
+}
+
+/* CORES */
+
+.seiva-pink {
+  color: #d90b31;
+}
+
+.seiva-vinho {
+  color: #A8262C;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px){
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 575px){
+  .card-columns {
+    column-count: 1;
+  }
+}

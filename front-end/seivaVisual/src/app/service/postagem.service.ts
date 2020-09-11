@@ -9,8 +9,6 @@ import { Postagem } from '../model/Postagem';
 })
 export class PostagemService {
 
-
-
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin){
@@ -43,6 +41,10 @@ export class PostagemService {
 
   deletePostagem(id: number){
     return this.http.delete(`http://localhost:9000/postagem/${id}`, this.token)
+  }
+
+  getByTituloPostagem(descricao: string){
+    return this.http.get(`http://localhost:9000/postagem/descricao/${descricao}`, this.token)
   }
 
   btnSair(){
