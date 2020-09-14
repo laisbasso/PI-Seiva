@@ -20,12 +20,5 @@ export class HomeInicioComponent implements OnInit {
   ngOnInit() {
   }
 
-  entrar() {
-    this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
-      this.userLogin = resp
-      localStorage.setItem("token", this.userLogin.token)
-      localStorage.setItem("email", this.userLogin.usuario)
-      this.router.navigate(["/feed"])
-    })
-  }
+  
 }

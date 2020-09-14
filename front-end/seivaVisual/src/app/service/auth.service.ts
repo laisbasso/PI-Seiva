@@ -37,5 +37,26 @@ export class AuthService {
     }
     return ok
   }
+  
+  navbarLogado(){ 
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if (token != null){
+      ok = true
+    }
+    return ok
+  }
+
+  navbarHome(){ 
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if (token == null){
+      ok = true
+    }
+    return ok
+  }
 
 }
+
