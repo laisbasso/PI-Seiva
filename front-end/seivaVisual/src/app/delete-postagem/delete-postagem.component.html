@@ -7,7 +7,7 @@
       <div class="col-md-7">
         <div class="display-4 pl-0 mb-5 text-center"> Tem certeza que deseja apagar essa postagem? </div>
         <div class="card border-danger mb-5">
-          <img class="card-img-top" src="{{postagem.imagem}}" alt="Card image cap">
+          <img class="card-img-top" src="{{postagem.imagem}}" alt="Imagem sobre {{postagem.tema.descricao}}"">
           <div class="card-body">
 
                 <h6 class="seiva-vinho">{{postagem.tema.descricao}}</h6>
@@ -22,7 +22,7 @@
 
         <div class="row mb-5">
           <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-outline-success w-25 rounded-pill mr-5" (click)="btnSim()"><img alt="Deletar"
+            <button class="btn btn-outline-success w-25 rounded-pill mr-5" (click)="btnSim()"><img alt="Lixeira"
               class="icon" src="../../assets/img/yes.png"><span class="p-2">Deletar</span></button>
 
           <button class="btn btn-outline-danger w-25 rounded-pill ml-5" (click)="btnNao()"><img alt="Cancelar"
