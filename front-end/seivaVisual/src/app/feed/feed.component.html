@@ -7,10 +7,10 @@
   <div class="row">
     <div class="col-md-12 d-flex justify-content-around flex-wrap" id="temas">
       <div class="subir-card mt-2 text-decoration-none justify-content-center" *ngFor='let item of listaTemas'>
-        <div class="card border-0 shadow p-3 mb-2 bg-white rounded">
+        <div class="card border-0 shadow p-1 mb-2 bg-white rounded">
           <img class="card-img-overlay w-100 p-0" src="{{item.imagem}}" alt="Card image cap">
           
-            <h3 class="card-title text-center pt-5 text-light">{{item.descricao}}</h3>
+            <h4 class="card-title text-center pt-5 m-0 text-light">{{item.descricao}}</h4>
          
         </div>
       </div>
@@ -18,10 +18,10 @@
   </div>
   <!-- /CARDS TEMAS -->
 
-  <!-- POSTAGEM -->
+  <!-- NOVA POSTAGEM -->
   <div class="row mt-5" id="postagem">
     <div class="col-md-7 mb-5 mt-5">
-      <div class="display-4 pl-0 mb-3"> Vamos falar sobre música hoje? </div>
+      <div class="display-4 pl-0 mb-3"> Sobre o que você quer falar hoje? </div>
       <div class="form-group">
         <label class="" for="titulo">Título:</label>
         <input required type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
@@ -32,6 +32,12 @@
         <label class="" for="texto">Texto:</label>
         <textarea required class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
           [(ngModel)]='postagem.descricao'></textarea>
+      </div>
+
+      <div class="form-group">
+          <label class="" for="texto">Imagem:</label>
+          <input class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
+              [(ngModel)]='postagem.imagem'>
       </div>
 
       <div class="row d-flex align-items-end">
@@ -60,7 +66,7 @@
     </div>
   </div>
   <!-- /IMAGEM -->
-  <!-- /POSTAGEM -->
+  <!-- /NOVA POSTAGEM -->
 
   <div class="row">
     <div class="col-md-12">
@@ -82,7 +88,8 @@
 
       <!-- POSTAGENS -->
       <div class="card-columns mt-5" id="posts">
-        <div class="card border-danger p-3" *ngFor="let item of listaPostagens">
+        <div class="card border-danger" *ngFor="let item of listaPostagens">
+          <img class="card-img-top" src="{{item.imagem}}" alt="Card image cap">
           <div class="card-body">
 
             <div class="d-flex justify-content-between">

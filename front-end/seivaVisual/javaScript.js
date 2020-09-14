@@ -9,7 +9,7 @@ $(document).ready(function() {
 // Botão descer pro SOBRE
 $(document).ready(function() {
     $('#sobre').click(function() {
-        $('html, body').animate({ scrollTop: 730 }, 'slow');
+        $('html, body').animate({ scrollTop: 650 }, 'slow');
         return false;
     });
 });
