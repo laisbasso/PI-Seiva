@@ -36,8 +36,8 @@ export class PostTemaComponent implements OnInit {
   }
 
   cadastrar() {
-    if (this.tema.descricao == null) {
-      this.alert.showAlertInfo('Preencha o campo de nome do tema corretamente')
+    if (this.tema.descricao == null || this.tema.imagem == null) {
+      this.alert.showAlertInfo('Por favor, preencha todos os campos!')
     } else {
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp
