@@ -8,12 +8,12 @@
         <div class="display-4 pl-0 mb-5 text-center"> Tem certeza que deseja editar esse tema? </div>
         <div class="form-group col-md-12 text-center">          
           <label class="" for="texto">Novo nome:</label>
-          <input class="form-control mb-4 text-center" [(ngModel)]='tema.descricao'>
+          <input required class="form-control mb-4 text-center" [(ngModel)]='tema.descricao'>
         </div>
 
         <div class="form-group col-md-12 text-center">          
             <label for="img-tema">Imagem do tema</label>
-            <input type="text" class="form-control" id="img-post" aria-describedby="img-tema"
+            <input required type="text" class="form-control" id="img-post" aria-describedby="img-tema"
                 placeholder="Cole aqui o link da imagem" [(ngModel)]="tema.imagem">
         </div>
 

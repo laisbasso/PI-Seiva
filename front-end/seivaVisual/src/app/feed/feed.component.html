@@ -7,15 +7,99 @@
   <div class="row">
     <div class="col-md-12 d-flex justify-content-around flex-wrap" id="temas">
       <div class="subir-card mt-2 text-decoration-none justify-content-center" *ngFor='let item of listaTemas'>
-        <div class="card border-0 shadow p-1 mb-2 bg-white rounded">
-          <img class="card-img-overlay w-100 p-0" src="{{item.imagem}}" alt="Card image cap">
-          
+
+        <button class="btn" id="button-cards" type="button" (click)='findByNomeTema()' [(ngModel)]='nomeTema'>
+          <div class="card border-0 shadow p-1 mb-2 bg-white rounded">
+            <img class="card-img-overlay w-100 p-0" src="{{item.imagem}}" alt="Card image cap">
+
             <h4 class="card-title text-center pt-5 m-0 text-light">{{item.descricao}}</h4>
-         
-        </div>
+          </div>
+        </button>
+
       </div>
     </div>
   </div>
+
+  <!-- TESTE COM INPUT -->
+
+  <div class="display-4 pl-0 mb-5  d-flex justify-content-center"> Pesquisar de acordo com tema </div>
+  <div class="row mt-3 mb-3 mt-3 d-flex justify-content-center">
+    <div class="col-md-3">
+      <input class="form-control w-100 mb-3" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar"
+        [(ngModel)]='nomeTema'>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-outline-info w-100 rounded-pill" typoe="button" (click)='findByNomeTema()'><img
+          alt="Pesquisar" class="icon" src="../../assets/img/search.png"><span class="p-2">Pesquisar</span></button>
+    </div>
+  </div>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      
+      <div class="card-columns mt-5">
+        <div class="card border-danger" *ngFor="let tema of listaTemas">
+          <div *ngFor='let post of tema.postagem'>
+          <img class="card-img-top" src="{{post.imagem}}" alt="Card image cap">
+          <div class="card-body">
+
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="card-title mt-2 seiva-pink">{{post.titulo}}</h3>
+              </div>
+            </div>
+
+            <p class="card-text text-justify" aria-describedby="texto"> {{post.descricao}} </p>
+            <small id="texto" class="form-text m-0 text-muted">
+              Postado em {{post.data | date:'dd/MM/yyyy'}} às
+              {{post.data | date:'HH:mm'}}</small>
+          </div>
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <!-- /TESTE COM INPUT -->
+
+  <!-- TESTE COM CARDS -->
+  <!-- <div class="card-columns mt-5" id="posts">
+    <div class="card border-danger" *ngFor="let tema of listaTemas">
+      <div *ngFor='let post of tema.postagem'>
+        <img class="card-img-top" src="{{post.imagem}}" alt="Card image cap">
+        <div class="card-body">
+
+          <div class="d-flex justify-content-between">
+            <div>
+              <h6 class="seiva-vinho">{{item.tema.descricao}}</h6>
+              <h3 class="card-title mt-2 seiva-pink">{{post.titulo}}</h3>
+            </div>
+
+            <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                src="../../assets/img/settings.png" title="Configurações da postagem" alt="Configurações da postagem"
+                style=width:35px;>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right text-justify" id="settings-post">
+              <a class="dropdown-item p-3" title="Editar" [routerLink]="['/editar-postagem', item.id]"><img
+                  alt="Editar postagem" class="icon" src="../../assets/img/edit.png"></a>
+              <a class="dropdown-item p-3" title="Deletar" [routerLink]="['/deletar-postagem', item.id]"><img
+                  alt="Excluir postagem" class="icon" src="../../assets/img/del.png"></a>
+            </div>
+          </div>
+
+          <p class="card-text text-justify" aria-describedby="texto"> {{post.descricao}} </p>
+          <small id="texto" class="form-text m-0 text-muted">
+            Postado em {{post.data | date:'dd/MM/yyyy'}} às
+            {{post.data | date:'HH:mm'}}</small>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- /TESTE -->
   <!-- /CARDS TEMAS -->
 
   <!-- NOVA POSTAGEM -->
@@ -23,21 +107,21 @@
     <div class="col-md-7 mb-5 mt-5">
       <div class="display-4 pl-0 mb-3"> Sobre o que você quer falar hoje? </div>
       <div class="form-group">
-        <label class="" for="titulo">Título:</label>
-        <input required type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+        <label for="titulo">Título (entre 5 e 100 caracteres):</label>
+        <input required type="text" class="form-control" id="titulo" placeholder="Digite aqui o título da postagem"
           [(ngModel)]='postagem.titulo'>
       </div>
 
       <div class="form-group">
-        <label class="" for="texto">Texto:</label>
-        <textarea required class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
+        <label class="" for="texto">Texto (entre 5 e 500 caracteres):</label>
+        <textarea required class="form-control" id="texto" rows="3" placeholder="Digite aqui o texto da postagem"
           [(ngModel)]='postagem.descricao'></textarea>
       </div>
 
       <div class="form-group">
-          <label class="" for="texto">Imagem:</label>
-          <input class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
-              [(ngModel)]='postagem.imagem'>
+        <label class="" for="texto">Imagem (até 255 caracteres):</label>
+        <input class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
+          [(ngModel)]='postagem.imagem'>
       </div>
 
       <div class="row d-flex align-items-end">

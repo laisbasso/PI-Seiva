@@ -8,15 +8,15 @@
             <div class="display-4 pl-0 mb-5 text-center"> Cadastro de um novo tema </div>
 
             <div class="form-group">
-                <label class="" for="texto">Nome do tema:</label>
-                <input class="form-control mb-4" id="texto" rows="3" placeholder="Digite aqui o seu novo tema"
+                <label class="" for="texto">Tema (entre 3 e 15 caracteres):</label>
+                <input required class="form-control mb-4" id="texto" rows="3" placeholder="Digite aqui o novo tema"
                     [(ngModel)]='tema.descricao'>
             </div>
 
             <div class="form-group">
-                <label class="" for="texto">Imagem:</label>
-                <input class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
-                    [(ngModel)]='tema.imagem' required>
+                <label class="" for="texto">Imagem (até 255 caracteres):</label>
+                <input required class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
+                    [(ngModel)]='tema.imagem'>
             </div>
 
             <div class="row mb-5">
