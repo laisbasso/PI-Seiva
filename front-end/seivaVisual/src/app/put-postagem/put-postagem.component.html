@@ -19,6 +19,12 @@
         </div>
 
         <div class="form-group col-md-12 text-center">          
+            <label for="img-post">Imagem da postagem</label>
+            <input type="text" class="form-control" id="img-post" aria-describedby="img-post"
+                placeholder="Cole aqui o link da imagem" [(ngModel)]="postagem.imagem">
+        </div>
+
+        <div class="form-group col-md-12 text-center">          
             <label class="" for="tema">Escolha um tema</label>
                     <select name="tema" id='tema' [(ngModel)]="idTema" (change)="findByIdTema()" class="form-control">
                         <option *ngFor="let item of listaTemas" value={{item.id}}>
