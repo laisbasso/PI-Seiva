@@ -4,6 +4,7 @@ import { PostagemService } from '../service/postagem.service';
 import { Postagem } from './../model/Postagem';
 import { Tema } from '../model/Tema';
 import { AlertsService } from '../service/alerts.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -28,12 +29,15 @@ export class FeedComponent implements OnInit {
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private alert: AlertsService
+    private alert: AlertsService,
+    private router: Router,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit() {
+    this.idTema = this.route.snapshot.params["id"];
     window.scroll(0, 0);
-
+    this.findByIdTema();
     this.findAllPostagens();
     this.findAllTemas();
   }

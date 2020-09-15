@@ -23,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { BotaoLateralComponent } from './botao-lateral/botao-lateral.component';
+import { PostagemTemaComponent } from './postagem-tema/postagem-tema.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BotaoLateralComponent } from './botao-lateral/botao-lateral.component';
     NavbarComponent,
     CadastroComponent,
     AlertsComponent,
-    BotaoLateralComponent
+    BotaoLateralComponent,
+    PostagemTemaComponent
   ],
   imports: [
     BrowserModule,
