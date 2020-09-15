@@ -69,13 +69,13 @@ export class PostagemService {
     return ok
   }
 
-  existePost(post){
-    let existe = false
+  // existePost(){
+  //   let existe = false
 
-    if ( post != null){
-      existe = true
-    }
+  //   if ( post != null){
+  //     existe = true
+  //   }
 
-    return existe
-  }
+  //   return existe
+  // }
 }

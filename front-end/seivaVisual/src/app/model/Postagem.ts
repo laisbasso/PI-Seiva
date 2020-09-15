@@ -6,5 +6,6 @@ export class Postagem {
     public descricao: string;
     public data: Date;
     public tema: Tema;
-    public imagem: string
+    public imagem: string;
+    public descricaoImagem: string
 }
