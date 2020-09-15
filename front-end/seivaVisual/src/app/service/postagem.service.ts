@@ -47,6 +47,10 @@ export class PostagemService {
     return this.http.get(`http://localhost:8080/postagem/descricao/${descricao}`, this.token)
   }
 
+  // getByTituloPostagem(descricao: string){
+  //   return this.http.get(`http://localhost:9000/postagem/descricao/${descricao}`, this.token)
+  // }
+
   btnSair(){
     let ok = false
     let token = localStorage.getItem('token')

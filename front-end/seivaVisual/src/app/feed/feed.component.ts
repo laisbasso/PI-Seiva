@@ -24,7 +24,7 @@ export class FeedComponent implements OnInit {
 
   idTema: number;
   nomeTema: string;
-  descricao: string;
+  descricao: string
 
   constructor(
     private postagemService: PostagemService,
@@ -70,15 +70,25 @@ export class FeedComponent implements OnInit {
     });
   }
 
-  findByTituloPostagem() {
-    if (this.titulo === '') {
-      this.findAllPostagens();
+  // findByTituloPostagem() {
+  //   if (this.titulo === '') {
+  //     this.findAllPostagens();
+  //   } else {
+  //     this.postagemService
+  //       .getByTituloPostagem(this.titulo)
+  //       .subscribe((resp: Postagem[]) => {
+  //         this.listaPostagens = resp;
+  //       });
+  //   }
+  // }
+
+  findByTituloPostagem(){
+    if(this.titulo === ''){
+      this.findAllPostagens()
     } else {
-      this.postagemService
-        .getByTituloPostagem(this.titulo)
-        .subscribe((resp: Postagem[]) => {
-          this.listaPostagens = resp;
-        });
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
     }
   }
 
@@ -102,3 +112,4 @@ export class FeedComponent implements OnInit {
     });
   }
 }
+
