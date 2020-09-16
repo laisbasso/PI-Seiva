@@ -1,5 +1,3 @@
-<app-navbar></app-navbar>
-
 <!-- CONTAINER -->
 <div class="container mt-5 pt-5">
 
@@ -7,82 +5,104 @@
   <div class="row">
     <div class="col-md-12 d-flex justify-content-around flex-wrap" id="temas">
       <div class="subir-card mt-2 text-decoration-none justify-content-center" *ngFor='let item of listaTemas'>
-        <div class="card border-0 shadow p-3 mb-2 bg-white rounded">
-          <img class="card-img-overlay w-100 p-0" src="{{item.imagem}}" alt="Card image cap">
-          
-            <h3 class="card-title text-center pt-5 text-light">{{item.descricao}}</h3>
-         
-        </div>
+
+        <button class="btn" [routerLink]="['/postagem-tema', item.id]">
+          <div class="card border-0 shadow p-1 mb-2 bg-white rounded">
+            <img class="card-img-overlay w-100 p-0" src="{{item.imagem}}" alt="Ilustração sobre {{item.descricao}}">
+
+            <h4 class="card-title text-center pt-5 m-0 text-light">{{item.descricao}}</h4>
+          </div>
+        </button>
       </div>
     </div>
   </div>
   <!-- /CARDS TEMAS -->
 
-  <!-- POSTAGEM -->
+  <!-- NOVA POSTAGEM -->
   <div class="row mt-5" id="postagem">
     <div class="col-md-7 mb-5 mt-5">
-      <div class="display-4 pl-0 mb-3"> Vamos falar sobre música hoje? </div>
+      <div class="display-4 pl-0 mb-3"> Sobre o que você quer falar hoje? </div>
+
+      <!-- FORM -->
       <div class="form-group">
-        <label class="" for="titulo">Título:</label>
-        <input required type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+        <label for="titulo">Título (entre 5 e 100 caracteres):</label>
+        <input required type="text" class="form-control" id="titulo" placeholder="Digite aqui o título da postagem"
           [(ngModel)]='postagem.titulo'>
       </div>
 
       <div class="form-group">
-        <label class="" for="texto">Texto:</label>
-        <textarea required class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
+        <label for="texto">Texto (entre 5 e 500 caracteres):</label>
+        <textarea required class="form-control" id="texto" rows="3" placeholder="Digite aqui o texto da postagem"
           [(ngModel)]='postagem.descricao'></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="imagem">Imagem (até 255 caracteres):</label>
+        <input required class="form-control mb-4" id="imagem" rows="3" placeholder="Cole aqui o link da imagem"
+          [(ngModel)]='postagem.imagem'>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao-imagem">Descrição da imagem (até 255 caracteres):</label>
+        <input required class="form-control mb-4" id="descricao-imagem" rows="3"
+          placeholder="Digite aqui a descrição detalhada da imagem" [(ngModel)]='postagem.descricaoImagem'>
       </div>
 
       <div class="row d-flex align-items-end">
         <div class="col-md-6">
           <div class="form-group m-0">
-            <label class="" for="tema">Escolha um tema:</label>
+            <label for="tema">Escolha um tema:</label>
             <select required name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-              <option *ngFor='let item of listaTemas' value={{item.id}}>
-                {{item.descricao}}
+              <option *ngFor='let itemtema of listaTemas' value={{itemtema.id}}>
+                {{itemtema.descricao}}
               </option>
             </select>
           </div>
         </div>
+        <!-- /FORM -->
 
-        <button class="btn btn-outline-danger w-25 rounded-pill mr-5" (click)="publicar()"><img alt="Publicar"
-            class="icon" src="../../assets/img/post.png"><span class="p-2">Publicar</span></button>
+      </div>
+        <!-- BOTÃO -->
+        <div class="col-md-6 p-0 m-0">
+        <button class="btn btn-outline-danger w-100 rounded-pill mt-3 p-2" (click)="publicar()"><img alt="Avião de papel"
+            class="icon" src="../../assets/img/post.png"><span>Publicar</span></button>
+        <!-- /BOTÃO -->
       </div>
     </div>
 
     <!-- IMAGEM -->
-
     <div class="col-md-5 mt-5 subir-card">
       <div class="card border-0 mt-5">
-        <img class="card-img-top" src="../../assets/img/img-post.png" alt="Card image cap">
+        <img class="card-img-top" src="../../assets/img/img-post.png"
+          alt="Ilustração com fundo amarelo, no centro da imagem há um dispositivo móvel com uma menina na tela, ela possui cabelos longos pretos, veste uma camiseta branca e está segurando um megafone. À esquerda da imagem há uma garota de cabelos curtos sentada no chão e encostada no dispositivo. Ela veste um cardigã branco e está mexendo no celular. À direita da imagem há outra garota, em pé, vestindo uma blusa branca de mangas longas e saia longa segurando um notebook. Existem balões de fala com joinhas, reticências e corações para decorar a imagem.">
       </div>
     </div>
   </div>
   <!-- /IMAGEM -->
-  <!-- /POSTAGEM -->
+  <!-- /NOVA POSTAGEM -->
 
   <div class="row">
     <div class="col-md-12">
       <hr class="mt-5 mb-5" />
 
       <!-- BUSCA CONTEÚDO -->
-      <div class="display-4 pl-0 mb-5  d-flex justify-content-center"> Pesquisar conteúdo </div>
+      <div class="display-4 pl-0 mb-5 d-flex justify-content-center"> Pesquisar conteúdo </div>
       <div class="row mt-3 mb-3 mt-3 d-flex justify-content-center">
         <div class="col-md-3">
           <input class="form-control w-100 mb-3" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar"
             [(ngModel)]='titulo'>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
           <button class="btn btn-outline-info w-100 rounded-pill" typoe="button" (click)='findByTituloPostagem()'><img
-              alt="Pesquisar" class="icon" src="../../assets/img/search.png"><span class="p-2">Pesquisar</span></button>
+              alt="Lupa" class="icon" src="../../assets/img/search.png"><span class="p-2">Pesquisar</span></button>
         </div>
       </div>
       <!-- /BUSCA CONTEÚDO -->
 
       <!-- POSTAGENS -->
       <div class="card-columns mt-5" id="posts">
-        <div class="card border-danger p-3" *ngFor="let item of listaPostagens">
+        <div class="card border-danger" *ngFor="let item of listaPostagens | orderBy : key : reverse">
+          <img class="card-img-top" src="{{item.imagem}}" alt="Imagem sobre {{item.titulo}}">
           <div class="card-body">
 
             <div class="d-flex justify-content-between">
@@ -92,14 +112,14 @@
               </div>
 
               <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                  src="../../assets/img/settings.png" title="Configurações da postagem" alt="Configurações da postagem"
+                  src="../../assets/img/settings.png" title="Configurações da postagem" alt="Engrenagem"
                   style=width:35px;>
               </button>
               <div class="dropdown-menu dropdown-menu-right text-justify" id="settings-post">
-                <a class="dropdown-item p-3" title="Editar" [routerLink]="['/editar-postagem', item.id]"><img
-                    alt="Editar postagem" class="icon" src="../../assets/img/edit.png"></a>
-                <a class="dropdown-item p-3" title="Deletar" [routerLink]="['/deletar-postagem', item.id]"><img
-                    alt="Excluir postagem" class="icon" src="../../assets/img/del.png"></a>
+                <a class="dropdown-item p-3" title="Editar postagem" [routerLink]="['/editar-postagem', item.id]"><img
+                    alt="Caneta azul sobre papel em branco" class="icon" src="../../assets/img/edit.png"></a>
+                <a class="dropdown-item p-3" title="Deletar postagem" [routerLink]="['/deletar-postagem', item.id]"><img
+                    alt="Lixeira" class="icon" src="../../assets/img/del.png"></a>
               </div>
             </div>
 
@@ -111,7 +131,16 @@
         </div>
       </div>
     </div>
-    <img class="img-fluid mt-3" src="../../assets/img/final-pag.png">
+    
+  <!-- BOTÃO LATERAL -->
+  <app-botao-lateral></app-botao-lateral>
+  <!-- BOTÃO LATERAL -->
+
+  <!-- BOTÃO SUBIR -->
+  <app-botao-subir></app-botao-subir>
+  <!-- BOTÃO SUBIR -->
+
+    <img class="img-fluid mt-3" alt="Ilustração de folhagens em tons terrosos" src="../../assets/img/final-pag.png">
   </div>
   <!-- /POSTAGENS -->
   <!-- /CONTAINER -->

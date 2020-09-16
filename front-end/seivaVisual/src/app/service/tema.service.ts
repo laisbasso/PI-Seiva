@@ -21,6 +21,10 @@ export class TemaService {
     return this.http.get(`http://localhost:9000/tema/${id}`, this.token)
   }
 
+  getByNomeTema(descricao: string){
+    return this.http.get(`http://localhost:9000/tema/descricao/${descricao}`, this.token)
+  }
+
   postTema(tema: Tema) {
     return this.http.post('http://localhost:9000/tema', tema, this.token)
   }
@@ -32,5 +36,5 @@ export class TemaService {
   deleteTema(id: number){
     return this.http.delete(`http://localhost:9000/tema/${id}`, this.token)
   }
-  
+
 }

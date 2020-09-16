@@ -10,6 +10,7 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+import { PostagemTemaComponent } from './postagem-tema/postagem-tema.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home-inicio', pathMatch: 'full' },
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: 'equipe', component: EquipeComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'feed', component: FeedComponent },
+  { path: 'feed/:id', component: FeedComponent },
+  { path: 'postagem-tema/:id', component: PostagemTemaComponent },
   { path: 'cadastro-tema', component: PostTemaComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'editar-postagem/:id', component: PutPostagemComponent },

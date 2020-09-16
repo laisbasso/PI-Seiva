@@ -1,31 +1,41 @@
-<app-navbar></app-navbar>
-
+<!-- CONTAINER -->
 <div class="container">
 
     <div class="row mt-5 mb-5 d-flex justify-content-center">
 
-        <div class="col-md-8 d justify-content-center">
+        <div class="col-md-8 mt-5 justify-content-center">
             <div class="display-4 pl-0 mb-5 text-center"> Cadastro de um novo tema </div>
 
-            <div class="form-group">
-                <label class="" for="texto">Nome do tema:</label>
-                <input class="form-control mb-4" id="texto" rows="3" placeholder="Digite aqui o seu novo tema"
+            <!-- FORM -->
+            <div class="form-group col-md-12 text-center">
+                <label for="texto">Tema (entre 3 e 15 caracteres):</label>
+                <input required class="form-control mb-4" id="texto" rows="3" placeholder="Digite aqui o novo tema"
                     [(ngModel)]='tema.descricao'>
             </div>
 
-            <div class="form-group">
-                <label class="" for="texto">Imagem:</label>
-                <input class="form-control mb-4" id="texto" rows="3" placeholder="Cole o link da imagem aqui"
+            <div class="form-group col-md-12 text-center">
+                <label for="imagem">Imagem (até 255 caracteres):</label>
+                <input required class="form-control mb-4" id="imagem" rows="3" placeholder="Cole aqui o link da imagem"
                     [(ngModel)]='tema.imagem'>
             </div>
 
+            <div class="form-group col-md-12 text-center">
+                <label for="descricao-imagem">Descrição da imagem (até 255 caracteres):</label>
+                <input required class="form-control mb-4" id="descricao-imagem" rows="3"
+                    placeholder="Digite aqui a descrição detalhada da imagem" [(ngModel)]='tema.descricaoImagem'>
+            </div>
+            <!-- /FORM -->
+
+            <!-- BOTÃO -->
             <div class="row mb-5">
                 <div class="col-md-12 d-flex justify-content-center">
 
-                    <button class="btn btn-outline-success w-25 rounded-pill mr-5" (click)="cadastrar()"><img alt="Cadastrar"
-                        class="icon" src="../../assets/img/plus.png"><span class="p-2">Cadastrar</span></button>
+                    <button class="btn btn-outline-success w-25 rounded-pill mr-5" (click)="cadastrar()"><img
+                            alt="Cadastrar" class="icon" src="../../assets/img/plus.png"><span
+                            class="p-2">Cadastrar</span></button>
                 </div>
             </div>
+            <!-- /BOTÃO -->
 
             <hr>
 
@@ -35,6 +45,7 @@
                 </div>
             </div>
 
+            <!-- TABELA -->
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -49,16 +60,19 @@
                         <td>{{item.descricao}}</td>
                         <td class="d-flex justify-content-end">
                             <a class="btn btn-outline-info mr-3 rounded-pill" title="Editar tema"
-                                [routerLink]="['/editar-tema', item.id]"><img alt="Editar postagem" class="icon"
-                                    src="../../assets/img/edit.png"></a>
+                                [routerLink]="['/editar-tema', item.id]"><img alt="Caneta azul sobre papel em branco"
+                                    class="icon" src="../../assets/img/edit.png"></a>
                             <a class="btn btn-outline-danger rounded-pill" title="Deletar tema"
-                                [routerLink]="['/deletar-tema', item.id]"><img alt="Apagar postagem" class="icon"
+                                [routerLink]="['/deletar-tema', item.id]"><img alt="Lixeira" class="icon"
                                     src="../../assets/img/del.png"></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <!-- /TABELA -->
+
         </div>
     </div>
-    <img class="img-fluid" src="../../assets/img/final-pag.png">
+    <img class="img-fluid" alt="Ilustração de folhagens em tons terrosos" src="../../assets/img/final-pag.png">
 </div>
+<!-- /CONTAINER -->

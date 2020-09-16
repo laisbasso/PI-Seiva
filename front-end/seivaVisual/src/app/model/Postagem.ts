@@ -5,5 +5,7 @@ export class Postagem {
     public titulo: string;
     public descricao: string;
     public data: Date;
-    public tema: Tema
+    public tema: Tema;
+    public imagem: string;
+    public descricaoImagem: string
 }

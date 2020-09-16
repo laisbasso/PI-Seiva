@@ -4,5 +4,6 @@ export class Tema {
     public id: number;
     public descricao: string;
     public imagem: string;
-    public postagem: Postagem []
+    public postagem: Postagem [];
+    public descricaoImagem: string
 }

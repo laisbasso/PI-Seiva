@@ -1,26 +1,69 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand"><img class="navbar-brand" src="../../assets/img/logo-seiva.png" width="100"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white p-3 menu w-100">
 
-    <div class="collapse navbar-collapse d-flex justify-content-end" target="collapseMenu">
-        <ul class="navbar-nav" id="collapseMenu">
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#" data-toggle="dropdown"><img class="rounded-circle ml-5" width="40"
-                        src="../../assets/img/profile.png"></a>
+    <!-- NAVBAR HOME -->
+    <img *ngIf='auth.navbarHome()' class="ml-3" src="https://i.imgur.com/tlxWFmB.png" width="30" height="30"
+        alt="Logo da Seiva">
+    <button *ngIf='auth.navbarHome()' class="navbar-toggler mr-3" type="button" data-toggle="collapse"
+        data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false"
+        aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <div *ngIf='auth.btnSair()' class="d-flex flex-wrap text-center justify-content-center" id="menu-drop">
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <a class="nav-link font-weight-bold p-2" routerLink='/feed'><img class="icon"
-                                src="../../assets/img/feed.png"><span class="p-1">Feed</span></a>
-
-                        <a *ngIf='auth.admin()' class="nav-link font-weight-bold p-2" routerLink='/admin'><img
-                                class="icon" src="../../assets/img/admin.png"><span>Admin</span></a>
-                        <div class="dropdown-divider"></div>
-                        <a class="nav-link font-weight-bold p-2" (click)='sair()'><img class="icon"
-                                src="../../assets/img/logout.png"><span>Logout</span></a>
-                    </ul>
-                </div>
+    <div class="collapse navbar-collapse p-3" id="conteudoNavbarSuportado" *ngIf='auth.navbarHome()'>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" id="sobre">Equipe/Sobre nós</a>
             </li>
-        </ul>
 
+        </ul>
+        <div class="form-group form-inline my-2 my-lg-0 mr-sm-2" *ngIf='auth.navbarHome()'>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Seu email" [(ngModel)]="userLogin.usuario">
+        </div>
+
+        <div class="form-group form-inline my-2 my-lg-0 mr-sm-2" *ngIf='auth.navbarHome()'>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
+                [(ngModel)]="userLogin.senha">
+        </div>
+        <div class="d-flex justify-content-center" *ngIf='auth.navbarHome()'>
+            <button type="submit" class="btn btn-outline-success w-10 " (click)="entrar()">Entrar</button>
+        </div>
+
+        <div *ngIf='auth.navbarHome()'>
+            <a class="nav-link" href="#" id="cadastro"> Cadastre-se! </a>
+        </div>
     </div>
+    <!-- /NAVBAR HOME -->
+
+    <!-- NAVBAR FEED -->
+    <div class="navbar navbar-expand-lg navbar-light bg-white w-100 p-0 d-flex justify-content-between"
+        *ngIf='auth.navbarLogado()'>
+        <a class="navbar-brand" routerLink='/feed'><img class="navbar-brand pl-3" src="../../assets/img/logo-seiva.png"
+                width="100" alt="Logo da Seiva"></a>
+
+        <div target="collapseMenu">
+            <ul class="navbar-nav" id="collapseMenu">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-toggle="dropdown"><img class="rounded-circle ml-5" width="40"
+                            src="../../assets/img/profile.png" alt="Foto de perfil"></a>
+
+                    <div *ngIf='auth.btnSair()' class="d-flex flex-wrap text-center justify-content-center"
+                        id="menu-drop">
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <a class="nav-link font-weight-bold p-2" routerLink='/feed'><img class="icon"
+                                    src="../../assets/img/feed.png" alt="Feed"><span class="p-1">Feed</span></a>
+
+                            <a *ngIf='auth.admin()' class="nav-link font-weight-bold p-2" routerLink='/admin'><img
+                                    class="icon" src="../../assets/img/admin.png" alt="Admin"><span>Admin</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link font-weight-bold p-2" (click)='sair()'><img class="icon"
+                                    src="../../assets/img/logout.png" alt="Logout"><span>Logout</span></a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- /NAVBAR FEED -->
 </nav>

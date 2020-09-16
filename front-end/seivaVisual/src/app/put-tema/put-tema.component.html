@@ -1,25 +1,43 @@
-<app-navbar></app-navbar>
+<!-- CONTAINER -->
+<div class="container">
 
-  <div class="container">
+  <div class="row mt-5 mb-5 d-flex justify-content-center">
 
-    <div class="row mt-5 mb-5 d-flex justify-content-center">
-  
-      <div class="col-md-7">
-        <div class="display-4 pl-0 mb-5 text-center"> Tem certeza que deseja editar esse tema? </div>
-        <div class="form-group col-md-12 text-center">          
-          <label class="" for="texto">Novo nome:</label>
-          <input class="form-control mb-4 text-center" [(ngModel)]='tema.descricao'>
-        </div>
-        <div class="row mb-5">
-          <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-outline-success w-25 rounded-pill mr-5" (click)="salvar()"><img alt="Salvar"
-                class="icon" src="../../assets/img/yes.png"><span class="p-2">Salvar</span></button>
-             <button class="btn btn-outline-danger w-25 rounded-pill ml-5" (click)="btnNao()"><img alt="Pesquisar"
-                class="icon" src="../../assets/img/no.png"><span class="p-2">Cancelar</span></button> 
-          </div>
+    <div class="col-md-7 mt-5">
+      <div class="display-4 pl-0 mb-5 text-center"> Tem certeza que deseja editar esse tema? </div>
+
+      <!-- FORM -->
+      <div class="form-group col-md-12 text-center">
+        <label class="" for="texto">Novo nome:</label>
+        <input required class="form-control mb-4 text-center" [(ngModel)]='tema.descricao'>
+      </div>
+
+      <div class="form-group col-md-12 text-center">
+        <label for="img-tema">Imagem do tema</label>
+        <input required type="text" class="form-control" id="img-post" aria-describedby="img-tema"
+          placeholder="Cole aqui o link da imagem" [(ngModel)]="tema.imagem">
+      </div>
+
+      <div class="form-group col-md-12 text-center">
+        <label for="descricao-imagem">Descrição da imagem (até 255 caracteres):</label>
+        <input required class="form-control mb-4" id="descricao-imagem" rows="3"
+          placeholder="Digite aqui a descrição detalhada da imagem" [(ngModel)]='tema.descricaoImagem'>
+      </div>
+      <!-- /FORM -->
+
+      <!-- BOTÕES -->
+      <div class="row mb-5">
+        <div class="col-md-12 d-flex justify-content-center">
+          <button class="btn btn-outline-success w-25 rounded-pill mr-5" (click)="salvar()"><img alt="Salvar"
+              class="icon" src="../../assets/img/yes.png"><span class="p-2">Salvar</span></button>
+          <button class="btn btn-outline-danger w-25 rounded-pill ml-5" (click)="btnNao()"><img alt="Cancelar"
+              class="icon" src="../../assets/img/no.png"><span class="p-2">Cancelar</span></button>
         </div>
       </div>
-  
+      <!-- /BOTÕES -->
     </div>
-  
+
   </div>
+
+</div>
+<!-- /CONTAINER -->
