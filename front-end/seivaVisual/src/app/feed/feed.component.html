@@ -37,15 +37,15 @@
       </div>
 
       <div class="form-group">
-        <label for="texto">Imagem (até 255 caracteres):</label>
-        <input required class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
+        <label for="imagem">Imagem (até 255 caracteres):</label>
+        <input required class="form-control mb-4" id="imagem" rows="3" placeholder="Cole aqui o link da imagem"
           [(ngModel)]='postagem.imagem'>
       </div>
 
       <div class="form-group">
-        <label for="texto">Descrição da imagem (até 255 caracteres):</label>
-        <input required class="form-control mb-4" rows="3" placeholder="Digite aqui a descrição detalhada da imagem"
-          [(ngModel)]='postagem.descricaoImagem'>
+        <label for="descricao-imagem">Descrição da imagem (até 255 caracteres):</label>
+        <input required class="form-control mb-4" id="descricao-imagem" rows="3"
+          placeholder="Digite aqui a descrição detalhada da imagem" [(ngModel)]='postagem.descricaoImagem'>
       </div>
 
       <div class="row d-flex align-items-end">
@@ -96,42 +96,6 @@
         </div>
       </div>
       <!-- /BUSCA CONTEÚDO -->
-
-      <!-- BUSCA TEMA COM INPUT - FUNCIONAL! -->
-      <!-- <div class="display-4 pl-0 mb-5 d-flex justify-content-center"> Pesquisar pelo tema </div>
-      <div class="row mt-3 mb-3 mt-3 d-flex justify-content-center">
-        <div class="col-md-3">
-          <input class="form-control w-100 mb-3" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar"
-            [(ngModel)]='nomeTema'>
-        </div>
-        <div class="col-md-2">
-          <button class="btn btn-outline-info w-100 rounded-pill" typoe="button" (click)='findByNomeTema()'><img
-              alt="Lupa" class="icon" src="../../assets/img/search.png"><span class="p-2">Pesquisar</span></button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="card-columns mt-5">
-            <div class="card border-danger" *ngFor="let tema of listaTemas">
-              <div *ngFor='let post of tema.postagem'>
-                <img class="card-img-top" src="{{post.imagem}}" alt="Imagem sobre {{post.titulo}}">
-                <div class="card-body">
-
-                  <h3 class="card-title mt-2 seiva-pink">{{post.titulo}}</h3>
-
-                  <p class="card-text text-justify" aria-describedby="texto"> {{post.descricao}} </p>
-                  <small id="texto" class="form-text m-0 text-muted">
-                    Postado em {{post.data | date:'dd/MM/yyyy'}} às
-                    {{post.data | date:'HH:mm'}}</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- /BUSCA TEMA COM INPUT - FUNCIONAL! -->
 
       <!-- POSTAGENS -->
       <div class="card-columns mt-5" id="posts">

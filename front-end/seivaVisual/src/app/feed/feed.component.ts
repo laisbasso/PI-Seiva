@@ -24,18 +24,18 @@ export class FeedComponent implements OnInit {
 
   idTema: number;
   nomeTema: string;
-  descricao: string
+  descricao: string;
 
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
     private alert: AlertsService,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.idTema = this.route.snapshot.params["id"];
+    this.idTema = this.route.snapshot.params['id'];
     window.scroll(0, 0);
     this.findByIdTema();
     this.findAllPostagens();
@@ -70,25 +70,15 @@ export class FeedComponent implements OnInit {
     });
   }
 
-  // findByTituloPostagem() {
-  //   if (this.titulo === '') {
-  //     this.findAllPostagens();
-  //   } else {
-  //     this.postagemService
-  //       .getByTituloPostagem(this.titulo)
-  //       .subscribe((resp: Postagem[]) => {
-  //         this.listaPostagens = resp;
-  //       });
-  //   }
-  // }
-
-  findByTituloPostagem(){
-    if(this.titulo === ''){
-      this.findAllPostagens()
+  findByTituloPostagem() {
+    if (this.titulo === '') {
+      this.findAllPostagens();
     } else {
-      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
-        this.listaPostagens = resp
-      })
+      this.postagemService
+        .getByTituloPostagem(this.titulo)
+        .subscribe((resp: Postagem[]) => {
+          this.listaPostagens = resp;
+        });
     }
   }
 
@@ -112,4 +102,3 @@ export class FeedComponent implements OnInit {
     });
   }
 }
-

@@ -8,20 +8,20 @@
 
             <!-- FORM -->
             <div class="form-group col-md-12 text-center">
-                <label class="" for="texto">Tema (entre 3 e 15 caracteres):</label>
+                <label for="texto">Tema (entre 3 e 15 caracteres):</label>
                 <input required class="form-control mb-4" id="texto" rows="3" placeholder="Digite aqui o novo tema"
                     [(ngModel)]='tema.descricao'>
             </div>
 
             <div class="form-group col-md-12 text-center">
-                <label class="" for="texto">Imagem (até 255 caracteres):</label>
-                <input required class="form-control mb-4" id="texto" rows="3" placeholder="Cole aqui o link da imagem"
+                <label for="imagem">Imagem (até 255 caracteres):</label>
+                <input required class="form-control mb-4" id="imagem" rows="3" placeholder="Cole aqui o link da imagem"
                     [(ngModel)]='tema.imagem'>
             </div>
 
             <div class="form-group col-md-12 text-center">
-                <label for="texto">Descrição da imagem (até 255 caracteres):</label>
-                <input required class="form-control mb-4" rows="3"
+                <label for="descricao-imagem">Descrição da imagem (até 255 caracteres):</label>
+                <input required class="form-control mb-4" id="descricao-imagem" rows="3"
                     placeholder="Digite aqui a descrição detalhada da imagem" [(ngModel)]='tema.descricaoImagem'>
             </div>
             <!-- /FORM -->

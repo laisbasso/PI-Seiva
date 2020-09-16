@@ -20,7 +20,6 @@
                                 <small id="texto" class="form-text mb-5 text-muted">
                                     Postado em {{post.data | date:'dd/MM/yyyy'}} às
                                     {{post.data | date:'HH:mm'}}</small>
-
                                 <hr>
                             </div>
                         </div>
@@ -28,17 +27,35 @@
                 </div>
                 <!-- /POSTAGENS -->
 
-                <!-- BOTÃO -->
-                <div class="col-md-12 d-flex justify-content-center">
-
-                    <button class="btn btn-outline-info w-25 rounded-pill ml-5" (click)="voltar()"><img alt="Voltar"
-                            class="icon" src="../../assets/img/back.png"><span class="p-2">Voltar</span></button>
-                </div>
-                <!-- /BOTÃO -->
-
             </div>
         </div>
     </div>
+
+    <!-- BUSCA POR TEMA COM INPUT -->
+    <div class="display-4 pl-0 mb-5  d-flex justify-content-center"> Ver mais posts sobre: </div>
+    <div class="row mt-3 mb-5 mt-3 d-flex justify-content-center">
+        <div class="col-md-3">
+            <input class="form-control w-100 mb-3" type="search" placeholder="Ex: Cinema" aria-label="Pesquisar"
+                [(ngModel)]='nomeTema'>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-outline-info w-100 rounded-pill" typoe="button" (click)='findByInput()'><img
+                    alt="Pesquisar" class="icon" src="../../assets/img/search.png"><span
+                    class="p-2">Pesquisar</span></button>
+        </div>
+    </div>
+    <!-- /BUSCA POR TEMA COM INPUT -->
+
+    <!-- BOTÃO VOLTAR-->
+    <div class="row mt-3 mb-5 mt-3 d-flex justify-content-center">
+        <div class="col-md-7 d-flex justify-content-center">
+
+            <button class="btn btn-outline-info w-25 rounded-pill ml-5" (click)="voltar()"><img alt="Voltar"
+                    class="icon" src="../../assets/img/back.png"><span class="p-2">Voltar</span></button>
+        </div>
+    </div>
+    <!-- /BOTÃO VOLTAR -->
+
     <img class="img-fluid" alt="Ilustração de folhagens em tons terrosos" src="../../assets/img/final-pag.png">
 </div>
 <!-- /CONTAINER -->

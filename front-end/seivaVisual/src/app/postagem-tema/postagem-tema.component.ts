@@ -12,6 +12,8 @@ export class PostagemTemaComponent implements OnInit {
   idTema: number;
   tema: Tema;
   listaTemas: Tema[];
+  nomeTema: string;
+  descricao: string
 
   constructor(
     private router: Router,
@@ -32,13 +34,18 @@ export class PostagemTemaComponent implements OnInit {
   }
 
   findByNomeTema() {
-    this.temaService
-      .getByNomeTema(this.tema.descricao)
-      .subscribe((resp: Tema[]) => {
+    this.temaService.getByNomeTema(this.tema.descricao).subscribe((resp: Tema[]) => {
         this.listaTemas = resp;
-
-        console.log(JSON.stringify(this.listaTemas));
+        // console.log(JSON.stringify(this.listaTemas));
       });
+  }
+
+  findByInput(){
+    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+      this.listaTemas = resp;
+      this.tema.descricao = this.nomeTema;
+      window.scroll(0, 0)
+    })
   }
 
   voltar() {
