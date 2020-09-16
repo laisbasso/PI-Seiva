@@ -34,6 +34,8 @@ public class PostagemModel {
 	@Size(min = 5, max = 500)
 	private String descricao;
 
+	private String imagem;
+
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private UsuarioModel usuario;
@@ -72,6 +74,14 @@ public class PostagemModel {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 	public UsuarioModel getUsuario() {
