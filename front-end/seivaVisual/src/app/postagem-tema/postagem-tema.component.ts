@@ -9,6 +9,9 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./postagem-tema.component.css'],
 })
 export class PostagemTemaComponent implements OnInit {
+  key = 'data'
+  reverse = true
+
   idTema: number;
   tema: Tema;
   listaTemas: Tema[];
@@ -24,6 +27,7 @@ export class PostagemTemaComponent implements OnInit {
   ngOnInit() {
     this.idTema = this.route.snapshot.params['id'];
     this.findByIdTema();
+    window.scroll(0, 0);
   }
 
   findByIdTema() {

@@ -20,7 +20,8 @@ export class PostTemaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.findAllTemas()
+    this.findAllTemas();
+    window.scroll(0, 0);
   }
 
   findAllTemas() {
