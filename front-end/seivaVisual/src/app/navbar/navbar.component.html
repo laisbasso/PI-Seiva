@@ -10,11 +10,8 @@
 
     <div class="collapse navbar-collapse p-3" id="conteudoNavbarSuportado" *ngIf='auth.navbarHome()'>
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#"> <span class="sr-only">(página atual)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" id="sobre">Equipe/Sobre nós</a>
+                <a class="nav-link" id="sobre">Equipe/Sobre nós</a>
             </li>
 
         </ul>
@@ -38,10 +35,10 @@
 
     <div class="navbar navbar-expand-lg navbar-light bg-light w-100 p-0 d-flex justify-content-between"
         *ngIf='auth.navbarLogado()'>
-        <a class="navbar-brand"><img class="navbar-brand pl-3" src="../../assets/img/logo-seiva.png" width="100"
+        <a class="navbar-brand" routerLink='/feed'><img class="navbar-brand pl-3" src="../../assets/img/logo-seiva.png" width="100"
                 alt="Logo da Seiva"></a>
 
-        <div class="" target="collapseMenu">
+        <div target="collapseMenu">
             <ul class="navbar-nav" id="collapseMenu">
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#" data-toggle="dropdown"><img class="rounded-circle ml-5" width="40"
