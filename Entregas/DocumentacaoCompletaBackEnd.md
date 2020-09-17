@@ -105,7 +105,7 @@ A tabela possuirá os end-points básicos (get, post, put e delete) e mais dois 
     "usuario": 1,
     "tema": {
         "id": 2,
-        "descricao": "Curso"
+        "descricao": "Cursos"
     }
 }
 ```
