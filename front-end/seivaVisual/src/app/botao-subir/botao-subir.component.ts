@@ -12,4 +12,8 @@ export class BotaoSubirComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  subir(){
+    window.scroll(0,0);
+  }
+
 }

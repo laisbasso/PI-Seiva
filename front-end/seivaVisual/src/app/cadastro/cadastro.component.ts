@@ -39,4 +39,8 @@ export class CadastroComponent implements OnInit {
       this.alert.showAlertDanger("Suas senhas não conferem")
     }
   }
+
+  subir(){
+    window.scroll(0,0);
+  }
 }

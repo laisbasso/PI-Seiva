@@ -35,7 +35,7 @@ export class DeleteTemaComponent implements OnInit {
 
   btnSim() {
     this.temaService.deleteTema(this.tema.id).subscribe(() => {
-      this.router.navigate(['/cadastro-tema'])
+      this.router.navigate(['/feed'])
       this.alert.showAlertSuccess('Tema apagado com sucesso!')
     })
   }
