@@ -8,8 +8,9 @@
 |----------|------|
 | id | [PK] bigint |
 | descricao | String |
+| postagem | List<PostagemModel> |
 
-A tabela possuirá os atributos **ID** referente ao código de cada tema e **descrição** onde iremos inserir a temática: cursos, projetos, vagas, eventos, estudos, alimentação, entretenimento, etc.
+A tabela possuirá os atributos **ID** referente ao código de cada tema e **descrição** onde iremos inserir a temática: cursos, projetos, vagas, eventos, estudos, alimentação, entretenimento, etc. Mais a lista de postagem da marcação @OneToMany.
 
 ### CRUD
  
