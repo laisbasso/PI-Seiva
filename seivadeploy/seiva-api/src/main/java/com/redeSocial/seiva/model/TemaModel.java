@@ -28,10 +28,11 @@ public class TemaModel {
 	
 	private String imagem; 
 
+	private String descricaoImagem; 
+
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.PERSIST)
 	@JsonIgnoreProperties("tema")
 	private List<PostagemModel> postagem;
-	
 	
 	public long getId() {
 		return id;

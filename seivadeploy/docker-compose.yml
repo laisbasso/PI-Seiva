@@ -35,6 +35,14 @@ services:
       - db
     networks:
       - generation-network
+  seivaVisual:
+    image: nginx
+    volumes:
+      - ../front-end/seivaVisual/dist/seivaVisual:/usr/share/nginx/html/
+    ports:
+      - "4200:80"
+    networks:
+      - generation-network
 networks:
-  generation-network:
-    driver: bridge
+    generation-network:
+        driver: bridge

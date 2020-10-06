@@ -17,3 +17,25 @@ Chegamos em uma solução pautada em acesso à informação e compartilhamento, 
 **Seiva**, segundo a botânica, é um líquido que realiza o transporte da água, nutrientes, hormônios, oxigênio e gás carbônico pelo interior das plantas vasculares. Corresponde ao sangue dos seres humanos. Tanto a seiva quanto o sangue são substâncias vitais, que percorrem o interior e nos fornecem energia e vigor, mas, para além de características biológicas, nós seres humanos, precisamos de fatores socioculturais para sobrevivência. **E como diriam os Titãs**, “a gente não quer só comida, a gente quer comida, diversão e arte”, e é pensando nisso que nasce a rede social Seiva, considerando as formas de ver e viver a arte como um combustível.
 
 Nossa ideia foi pensada para ser uma rede social, porque ideologia se vive, não se consome e, dentro disso, que fosse possível a interação social entre pessoas que produzem e pessoas que se movimentam por determinadas causas ou interesses em comum.
+
+## Documentação completa 
+
+* [Back-end](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DocumentacaoCompletaBackEnd.md)
+* [Front-end](https://laisbasso.github.io/PI-Seiva/)
+
+## Screenshots
+
+### Home
+![Página da home](https://i.imgur.com/303SbGV.png "Home")
+
+### Feed
+![Página do feed](https://i.imgur.com/81LCvwC.png "Feed")
+
+### Permissões do admin
+![Página do admin](https://imgur.com/wunK3Of.png "Admin")
+
+### Exclusão da postagem
+![Página da exclusão da postagem](https://imgur.com/qDZ1vhJ.png "Post")
+
+### Postagens do tema específico
+![Página das postagens do tema](https://imgur.com/eeEWGn6.png "Postagens do tema")
