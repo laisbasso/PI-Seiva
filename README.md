@@ -22,3 +22,20 @@ Nossa ideia foi pensada para ser uma rede social, porque ideologia se vive, não
 
 * [Back-end](https://github.com/laisbasso/PI-Seiva/blob/master/Entregas/DocumentacaoCompletaBackEnd.md)
 * [Front-end](https://laisbasso.github.io/PI-Seiva/)
+
+## Screenshots
+
+### Home
+![Página da home](https://i.imgur.com/303SbGV.png "Home")
+
+### Feed
+![Página do feed](https://i.imgur.com/81LCvwC.png "Feed")
+
+### Permissões do admin
+![Página do admin](https://imgur.com/wunK3Of.png "Admin")
+
+### Exclusão da postagem
+![Página da exclusão da postagem](https://imgur.com/qDZ1vhJ.png "Post")
+
+### Postagens do tema específico
+![Página das postagens do tema](https://imgur.com/eeEWGn6.png "Postagens do tema")
